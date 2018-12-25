@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../kho/kho.css">
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Kho Long Bình - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="kho.js"></script>
+    <script src="../test.js"></script>
+</head>
+<body onload="build5(); themngay();">
+<header id="header1">
+</header>
+
+<nav>
+    <ul class="breadcrumb">
+        <li>
+            <a href="../">Trang chính</a>
+        </li>
+        <li>Quản lí kho hàng</li>
+    </ul>
+</nav>
+
+<section>
+        <div id="exitWindow" >
+                <div class="modal-content">
+                    <span onclick="hideDetail1()" class="close">&nbsp&times;&nbsp</span>
+                    <b>&nbsp</b>
+                    <p> <br>Bạn có chắc lưu và bỏ qua những form chưa nhập?</p><br>
+                    <a onclick="luuvaokho()">Yes</a>
+                    <a onclick="hideDetail1()" style="background-color: red">No</a>
+                    <p></p>
+                </div>
+            </div>
+            <div id="exitWindow1" >
+                <div class="modal-content">
+                    <span onclick="hideDetail1()" class="close">&nbsp&times;&nbsp</span>
+                    <b>&nbsp</b>
+                    <p> <br>Dữ liệu sẽ không được lưu nếu bạn thoát?</p><br>
+                    <a onclick="thoat()" style="background-color: red; margin-left: 30%">Thoát</a>
+                    <a onclick="hideDetail1()" style="background-color: red">Trở Lại</a>
+                    <p></p>
+                </div>
+            </div>
+    <div id="thongtinmacdinh">
+        <div id="thongtinmacdinh" style="display:block;">
+            <b style="font-size: 20px; text-align: center; margin-left: 70px;">Bạn không có quyền sử dụng chức năng này</b><br>
+            <input type="button" onclick="window.location='../'" id="btnExit" value="Về Trang Chủ">
+        </div>
+    </div>
+    <div id="canhbao" style="display: none; float: right; height: 200px; overflow: auto;" >
+        <b style="font-size: 25px; color: red">Cảnh báo: </b><br>
+        <span id="canhbaosoluongmn" style="font-size: 15px;  display: none;"><b>Kho Miền Nam: </b></span>
+        <span id="canhbaosoluongmt" style="font-size: 15px;  display: none;"><b>Kho Miền Trung: </b></span>
+        <span id="canhbaosoluongmb" style="font-size: 15px;  display: none;"><b>Kho Miền Bắc: </b></span>
+        <span id="canhbaohansudung" style="font-size: 15px;  display: none;"><b>Hạn sử dụng: </b></span>
+    </div><br><br><br><br><br><br>
+    <div id="menuchucnang" style="display: none;">
+        <button id="nutxem" onclick="clickxem()" style="margin-left: 30%; margin-top: 80px">Xem hàng</button>
+        <button id="nutnhap" onclick="clicknhap()">Nhập hàng</button>
+        <button id="nutxuat" onclick="clickxuat()">Xuất hàng</button>
+    </div>
+    <div id="nutchucnang" >
+        <button id="tongkho" onclick="tongkho()" style="margin-left: 20%" disabled>Tổng hàng</button>
+        <button id="miennam" onclick="miennam()">Kho Miền Nam</button>
+        <button id="mientrung" onclick="mientrung()">Kho Miền Trung</button>
+        <button id="mienbac" onclick="mienbac()">Kho Miền Bắc</button>
+        <button id="xemchitiet1" onclick="xemchitiet1()">Xem Chi Tiết</button>
+    </div>
+    <div id="chucnangxemhang" style="display: none;">
+        <div id="dstongsanpham">
+                <p class="tieudedanhsach">Danh sách tổng sản phẩm của tất cả kho</p>
+                <table id="tableuser2">
+                    <tr>
+                            <th>Ảnh Sản Phẩm</th>
+                            <th>Tên sản Phẩm</th>
+                            <th>Mã sản phẩm</th>
+                            <th>Tổng Số lượng</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmiennam">
+                <p class="tieudedanhsach">Danh sách các sản phẩm của kho miền Nam</p>
+                <table id="tablemiennam">
+                    <tr>
+                            <th>Ảnh Sản Phẩm</th>
+                            <th>Tên sản Phẩm</th>
+                            <th>Mã sản phẩm</th>
+                            <th>Tổng Số lượng</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmientrung">
+                <p class="tieudedanhsach">Danh sách các sản phẩm của kho miền Trung</p>
+                <table id="tablemientrung">
+                    <tr>
+                            <th>Ảnh Sản Phẩm</th>
+                            <th>Tên sản Phẩm</th>
+                            <th>Mã sản phẩm</th>
+                            <th>Tổng Số lượng</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmienbac">
+                <p class="tieudedanhsach">Danh sách các sản phẩm của kho miền Bắc</p>
+            <table id="tablemienbac">
+                <tr>
+                        <th>Ảnh Sản Phẩm</th>
+                        <th>Tên sản Phẩm</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tổng Số lượng</th>
+                      </tr>
+        </table><br><br>
+        <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dschitiet">
+                <p class="tieudedanhsach">Danh sách chi tiết của từng sản phẩm</p>
+            <table id="tablechitiet">
+                <tr>
+                        <th>STT Mã</th>    
+                        <th>Ảnh Sản Phẩm</th>
+                        <th>Tên sản Phẩm</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Kho</th>
+                        <th>Ngày nhập</th>
+                        <th>Hạn Sử Dụng</th>
+                      </tr>
+        </table><br><br>
+        <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+    </div>
+    <div id="chucnangnhaphang" style="display: none;">
+        <p class="font3" style="margin-left: 30%">LƯU TRỮ HÀNG VÀO KHO</p>
+        <div id="nhaphang" >
+                <p class="tieudedanhsach">Nhập hàng vào kho</p>
+                <p style="font-size: 30px; margin-left: 10%">Chọn mã kho: <select id="selectKhuvuc" style="height: 30px; margin-left: 10px">
+                        <option>Kho Miền Nam</option>
+                        <option>Kho Miền Trung</option>
+                        <option>Kho Miền Bắc</option>
+                </select></p>
+                <span style="font-size: 30px; margin-left: 10%">Ngày nhập: </span><input style="margin-left: 40px; height: 30px;" type="date" class="txtNSX" value="2018-10-31" min="2018-10-31" disabled>
+
+                <br><br><br>
+                <div id="baotable">
+                <table id="tablenhap">
+                        <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Hạn sử dụng</th>
+                              </tr>
+                </table>
+            </div>
+            <button onclick="luuhang()" style="margin-left: 30%">Lưu hàng</button> <!-- nút này dùng để lưu sản phẩm vào kho -->
+            <button onclick="vetrangchu()" >Về trang chủ</button> <!-- reset lại giá trị trên khung nhập -->
+        </div>
+    </div>
+    <div id="chucnangxuathang" style="display: none;">
+        <p class="font3" style="margin-left: 30%">Thanh lý hàng ra kho</p>
+        <div id="xuathang" >
+            <p class="tieudedanhsach">Thanh lý hàng</p>
+            <span style="font-size: 30px; margin-left: 10%">STT Thanh lý: </span><input type="number" class="txtstt" value="0" min="0" style="margin-left: 66px; width: 120px;" onmouseout="kiemtrastt()"><b id="tttensp" style="font-size: 25px; padding-left: 55%; margin-top: -35px; display: none;">ABC</b><br>
+            <span style="font-size: 30px; margin-left: 10%">Số lượng Thanh lý: </span><input type="number" class="txtsl" value="0" min="0" style="width: 120px;"><br>
+            <span style="font-size: 30px; margin-left: 10%">Lí do <span style="color: red">*</span>: </span><input type="text" id="txtlido" placeholder="Nhập lí do thanh lý" style="margin-left: 148px; height: 30px; width: 400px;">
+            <br><br><br>
+        <button onclick="thanhly()" style="margin-left: 30%">Thanh lý</button> <!-- nút này dùng để lưu sản phẩm vào kho -->
+        <button onclick="vetrangchu()" >Về trang chủ</button> <!-- reset lại giá trị trên khung nhập -->
+    </div>
+    </div>
+</section>
+    
+</body>
+<footer id="ft1">
+            
+</footer>
+</html>

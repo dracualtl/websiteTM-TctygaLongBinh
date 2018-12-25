@@ -1,0 +1,312 @@
+/*_________________________________ Navigation _________________________________*/
+
+#navbar {
+    transition: top 0.3s;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    font-family: Arial;
+    border-bottom: 1px ridge gray;
+    padding-left: 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    margin-left: -8px;
+    z-index: 10;
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 20px 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+/* _________________________________ Left Navigation _________________________________*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin: 5px 5px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px gray;
+    border: 3px ridge grey;
+    z-index: 1;
+    border-radius: 6px;
+    margin-top: -5px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: fixed;
+    background-color: white;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px gray;
+    border: 3px ridge grey;
+    z-index: 1;
+    border-radius: 6px;
+    margin-top: -5px;
+}
+
+.dropdown-content1 a {
+    float: none;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a {
+    float: none;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0;
+    padding-bottom: 4px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown:hover .dropdown-content1 {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropdown-content a:hover, #chuadangnhap .dropdown-content > button:hover {
+    color: blue;
+    /* background-color: blue; */
+}
+
+.dropdown-content::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.dropdown-content1::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+/* _________________________________ Right Navigation _________________________________ */
+
+.right {
+    float: right;
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+.rdrop {
+    margin-top: 5px;
+    right: 0px;
+}
+
+.rdrop1 {
+    margin-top: 5px;
+    margin-right: 0px;
+}
+
+.search {
+    border: none;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.search input[type=text] {
+    padding: 10px 20px 10px 40px; 
+    background-image: url('search.png'); 
+    background-position: 5px; 
+    background-repeat: no-repeat; 
+    background-size: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.right .dropdown-content::after {
+    left: 45%;
+}
+
+.right .dropdown-content1::after {
+    left: 25%;
+}
+
+#giohang .dropdown-content::after {
+    left: 64%;
+} 
+
+#khachhang .dropdown-content::after {
+    left: 64%;
+} 
+
+#chuadangnhap .dropdown-content::after {
+    left: 64%;
+}
+
+#formcuaadmin .dropdown-content::after {
+    left: 64%;
+}
+
+#nhanvienbanhang .dropdown-content::after{
+    left: 64%;
+}
+#nhanvienkinhdoanh .dropdown-content::after{
+    left: 64%;
+}
+#nhanviengiaohang .dropdown-content::after{
+    left: 64%;
+}
+#cankichhoat .dropdown-content::after{
+    left: 64%;
+}
+/* _________________________________ Dang nhap  _________________________________ */
+#giohang .dropdown-content1 {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#cankichhoat .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+#nhanviengiaohang .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#nhanvienbanhang .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#nhanvienkinhdoanh .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#formcuaadmin .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#chuadangnhap .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#khachhang .dropdown-content {
+    top: 60px;
+    width: 300px; 
+    min-height: 150px;
+    margin-top: 20px;
+}
+
+#chuadangnhap input[type=text] {
+    float: right;
+    width: 88%;
+    margin: 0 2%;
+    font-size: 15px;
+}
+#chuadangnhap input[type=password] {
+    float: right;
+    width: 88%;
+    margin: 0 2%;
+    font-size: 15px;
+}
+#chuadangnhap input[type=submit] {
+    float: right;
+    width: 95%;
+    margin: 0 2%;
+    font-size: 15px;
+}
+
+#chuadangnhap .dropdown-content > button {
+    font-size: 15px;
+    margin-left: 40px;
+    width: 90px;
+    height: 40px;
+}
+
+#chuadangnhap button > a {
+    padding: 0 0 0 10px;
+    font-size: 15px;
+}
+
+/* _________________________________ Sub content _________________________________ */
+
+.sub-dropdown {
+    float: none;
+    overflow: hidden;
+    margin: 5px 5px 0;
+}
+/* New: sửa margin-left và thêm sub-content.fixed */
+.sub-content {
+    display: none;
+    position: fixed;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px gray;
+    border: 1px ridge grey;
+    z-index: 1;
+    border-radius: 6px;
+    margin-top: -50px;
+    margin-left: 321px;
+}
+
+.sub-content.fixed {
+    margin-left: 172px;
+}
+/* New */
+.sub-dropdown:hover .sub-content {
+    display: block;
+}
+
+

@@ -1,0 +1,31 @@
+
+#khungchung{
+    width: 900px;;
+    height: 600px;
+    margin-left: 20%;
+    background-color: cornflowerblue;
+}
+
+#khungnhantin{
+    float: left;
+    width: 500px;
+    height: 600px;
+    margin-left: 10%;
+}
+
+
+#hienthinoidung{
+    width: 500px;
+    height: 400px;
+    background-color: antiquewhite;
+}
+
+#dsnvonline{
+    float: right;
+    width: 200px;
+    height: 400px;
+    margin-top: 70px;
+    margin-right: 70px;
+    background-color: pink;
+}
+

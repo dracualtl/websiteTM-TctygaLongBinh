@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="Ga_tuoi.css">
+    <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Gà tươi - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="../test.js"></script>
+</head >
+
+<body onload="build2()">
+
+    <header id="header1">
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../Trang_chinh_1.html">Trang chính</a>
+            </li>
+            <li>Gà tươi</li>
+        </ul>
+    </nav>
+
+    <section>
+        <div id="md">
+            <div class="modal-content">
+                <span onclick="hideDetail()" class="close">&times;</span>
+                <div class="row" style="padding: 0 4% 0 4%">
+
+                    <div class="columntype4">
+                        <img id="pageImg" src="./HinhAnh/14579499249632_ga-goc-tu-2-s-500x500.jpg">
+                    </div>
+
+                    <div class="columntype4">
+                        <div>
+                            <p id="tenSanPham" class="font1"></p>
+                            <p>Dòng sản phẩm: <span id="dongSanPham"></span><span id="hangTon" class="hangton">Vẫn còn
+                                    hàng</span></p>
+                            <p id="giaSanPham" class="font2"></p>
+                            <p>Giá chưa VAT: <span class="giaVAT">0</span>VND</p>
+                            <p><br><span style="font-size: 25px; color: red">
+                                    <b>CÔNG TY TNHH CHĂN NUÔI LONG BÌNH</b></span></p>
+                            <p>Nhà cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ sinh <br>
+                                Liên hệ với chúng tôi để có giá tốt nhất.<br>
+                                _ Phone: 0919166228</p>
+                            <p>_ Email : hoangphuc@longbinhfood.vn</p>
+                            <p>_ Mua Gà Tươi tại các cửa hàng khu vực Hồ Chí Minh</p>
+                            <p><b>1. Cửa hàng KDSP Gia Cầm Gà Hải Đăng</b></p>
+                            <p><b>Phone 1:</b> 0919.188.228 (Mr.Thịnh)</p>
+                            <p><b>Phone 2:</b> 0917.200.228 (Mr.Bồi)</p>
+                            <p><b>Địa Chỉ:</b> Số 322, Đường Liên Tỉnh 5 , P.6, Q.8</p>
+                            <p><b>2. Cửa hàng Long Bình Quận 1</b></p>
+                            <p><b>Phone:</b> 0919.160.228 (Mr. Hưng)</p>
+                            <p><b>Địa Chỉ:</b> Số 5, Nguyễn Thái Học, P.Cầu Ông Lãnh, Quận 1</p>
+                            <p><b>3. Cửa hàng Long Bình Chợ Bình Điền</b></p>
+                            <p><b>Phone:</b> 0915.610.228 (Mr. Phú)</p>
+                            <p><b>Địa Chỉ:</b> Sạp Phú Sơn, H1042 Lô H1, Chợ Đầu Mối Bình Điền</p>
+                            <p><b>4. Cửa hàng Long Bình Quận Tân Phú</b></p>
+                            <p><b>Phone:</b> 0919.600.228 (Mr. Tấn)</p>
+                            <p><b>Địa Chỉ:</b> Số 270, Nguyễn Sơn, P.Phú Thọ Hoà, Quận Tân Phú</p>
+                            <p><b>5. Văn Phòng Đại Diện Công Ty Long Bình (Chi Nhánh 1)</b></p>
+                            <p><b>Phone:</b> 0916.610.228 (Mr. Phúc)</p>
+                            <p><b>Địa Chỉ:</b> Số 438, Võ Văn Kiệt, P. Cô Giang, Quận 1</p>
+                            <p><b>6. Cửa hàng KDSP Gia Cầm Gà Hải Đăng (Bán Lẻ)</b></p>
+                            <p><b>Phone:</b> 0943.610.228 (Mrs. Hiền)</p>
+                            <p><b>Địa Chỉ:</b> Số 322, Đường Liên Tỉnh 5 , P.6, Q.8</p>
+                            <p><b>7. Cửa Hàng Gà Việt</b></p>
+                            <p><b>Phone:</b> 0919.166.228 (Mr. Sinh)</p>
+                            <p><b>Địa Chỉ:</b> Số 53 Đỗ Quang Đẩu, P.Phạm Ngũ Lão, Quận 1</p>
+                            <p><b>8. Cửa Hàng Long Bình (Quận 6)</b></p>
+                            <p><b>Phone:</b> 0916.660.228 (Mr. Hạ)</p>
+                            <p><b>Địa Chỉ:</b> Số 35B, Tân Hoà Đông, Phường 14, Quận 6, TP. Hồ Chí Minh<br><br></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="addForm">
+            <div class="modal-content">
+                <span onclick="hideDetail_sp()" class="close">&times;</span>
+                <p style="text-align: center"><b>THÊM SẢN PHẨM</b></p>
+
+                <div class="row" style="padding: 0 4% 0 4%">
+                    <div class="columntype5" style="margin: 0">
+                        <img src="../HinhAnh/addFood.png" alt="anh">
+                    </div>
+                    <div class="columntype4">
+                        <form id="themSp">
+                            <p>Mã sản phẩm: <input id="mahang" type="text"></p>
+                            <p>Tên sản phẩm: <input id="tenhang" type="text"></p>
+                            <p>Giá: <input id="giahang" type="text"></p>
+                            <p>Đơn vị: <select id="donvi">
+                                    <option>kg</option>
+                                    <option>g</option>
+                                </select></p>
+                            <p>Quy cách: <select id="quycach">
+                                    <option>Đầu</option>
+                                    <option>Chân</option>
+                                    <option>Cánh</option>
+                                    <option>Thân</option>
+                                </select></p>
+                            <p>Ngày sản xuất: <input id="nsx" type="date"></p>
+                            <p>Hạn sử dụng: <input id="hsd" type="date"></p>
+                            <p>Khuyến mãi: <input id="km" type="text"></p>
+                            <p>Ngày bắt đầu khuyến mãi: <input id="ngaykm" type="date"></p>
+                        </form>
+                    </div>
+                    
+                </div>
+                <a onclick="addFood()">Thêm</a>
+                <a onclick="resetAdd()">Nhập lại</a>
+                <a onclick="hideDetail_sp()">Thoát</a>
+                <p></p>
+
+            </div>
+        </div>
+
+        <div id="tab1" class="tabcontent" style="display: block">
+            <div class="danhsach" id="danhsach">
+
+                <div onclick="document.getElementById('addForm').style.display = 'block'" class="sanpham sp">
+                    <span>
+                        <img src="../HinhAnh/addFood.png" style="width: 58%; height: 40%; padding: 22% 0">
+                    </span>
+                    <div>
+                        <p style="font-size: 24px; font-weight: bold; color: blue; text-align: center">THÊM<br>SẢN PHẨM</p>
+                    </div>
+
+                </div>
+                <!-- New: thêm vào class "slsp" trước span chứa hình ảnh và thêm vào input "slmua" sau button "xem right" ( -->
+                <div class="sanpham sp" onmousemove="startShow(0)" onmouseout="endShow(0)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Canh_ga_tuoi.html">
+                            <img class="anh" src="../HinhAnh/canh-ga-1-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(0)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Canh_ga_tuoi.html">
+                            <p class="tensp">CÁNH GÀ</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 0)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(1)" onmouseout="endShow(1)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Chan_ga.html">
+                            <img class="anh" src="../HinhAnh/chan-ga-5-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(1)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Chan_ga.html">
+                            <p class="tensp">CHÂN GÀ</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">120.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 1)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(2)" onmouseout="endShow(2)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Dau_ga.html">
+                            <img class="anh" src="../HinhAnh/dau-ga-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(2)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Dau_ga.html">
+                            <p class="tensp">ĐẦU GÀ</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">120.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 2)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(3)" onmouseout="endShow(3)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Dui_toi.html">
+                            <img class="anh" src="../HinhAnh/dui-toi-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(3)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Dui_toi.html">
+                            <p class="tensp">ĐÙI TỎI</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 3)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(4)" onmouseout="endShow(4)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Ga_goc_tu.html">
+                            <img class="anh" src="../HinhAnh/14579499249632_ga-goc-tu-2-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(4)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Ga_goc_tu.html">
+                            <p class="tensp">GÀ GÓC TƯ (QUATER LEG)</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 4)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(5)" onmouseout="endShow(5)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Mong.html">
+                            <img class="anh" src="../HinhAnh/mong--ma-dui-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(5)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Mong.html">
+                            <p class="tensp">MÔNG (MÁ ĐÙI)</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 5)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(6)" onmouseout="endShow(6)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Uc_ga_nguyen_xuong_da.html">
+                            <img class="anh" src="../HinhAnh/14580963079507_uc-ga-co-xuong-2-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(6)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Uc_ga_nguyen_xuong_da.html">
+                            <p class="tensp">ỨC GÀ (NGUYÊN XƯƠNG DA)</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 6)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(7)" onmouseout="endShow(7)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Uc_ga_co_da.html">
+                            <img class="anh" src="../HinhAnh/Uc-fillet-skin-2-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(7)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Uc_ga_co_da.html">
+                            <p class="tensp">ỨC GÀ (CÓ DA)</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 7)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(8)" onmouseout="endShow(8)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Uc_ga_fillet_khong_da.html">
+                            <img class="anh" src="../HinhAnh/14580968004531_uc-fillet-no-skin-1-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(8)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Uc_ga_fillet_khong_da.html">
+                            <p class="tensp">ỨC GÀ FILLET (KHÔNG DA)</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 8)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(9)" onmouseout="endShow(9)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/San_pham_phu.html">
+                            <img class="anh" src="../HinhAnh/14580985235725_gan-tim-me--liver-heart-gizzard-1-s-500x500.jpg"
+                                alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(9)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/San_pham_phu.html">
+                            <p class="tensp">SẢN PHẨM PHỤ</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 9)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sanpham sp" onmousemove="startShow(10)" onmouseout="endShow(10)">
+                    <b class="slsp"><i>còn lại:</i><span>100</span></b>
+                    <span>
+                        <a href="../San pham/Xuong_ga.html">
+                            <img class="anh" src="../HinhAnh/14580971884883_xuong-dui-toi-s-500x500.jpg" alt="anh"></a>
+                        <button class="them">Thêm</button>
+                        <button class="xem right" onclick="showDetail(10)">Xem</button>
+                        <input class="slmua" type="number" value="1">
+                    </span>
+                    <div>
+                        <a href="../San pham/Xuong_ga.html">
+                            <p class="tensp">XƯƠNG GÀ TỔNG HỢP</p>
+                        </a>
+                        <p class="gia">
+                            <b class="giasp">100.000 VNĐ</b>
+                            <input type="text" class="nhapgia">
+                            <button onclick="changePrice(this, 10)" class="doigiaNV">Đổi giá</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New ) -->
+            </div>
+        </div>
+
+        <!-- <div id="tab2" class="tabcontent">
+            <h3>2</h3>
+        </div> -->
+
+
+        <div class="tab">
+            <button class="tablinks" onclick="prevTab()">&laquo</button>
+            <button class="tablinks active" onclick="changeTab(event, 'tab1')">1</button>
+            <!-- <button class="tablinks" onclick="changeTab(event, 'tab2')">2</button> -->
+            <button class="tablinks" onclick="nextTab()">&raquo</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="columntype1">
+                <img src="../HinhAnh/lbf.png" alt="Longbinhfood" width="150" height="100">
+                <p>Hiện tại và tương lai chúng tôi cố gắng cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ
+                    sinh trên
+                    toàn quốc. - </p>
+                <b>Nguyen Thanh Phi Long (CEO)</b>
+            </div>
+            <div class="columntype2">
+                <p>THÔNG TIN</p>
+                <a href="../Gioi thieu/Gioi_thieu.html">Thông tin chúng tôi</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Thông tin giao hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Chính sách bảo mật thông tin khách hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Điều khoản và điều kiện</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>QUẢN LÝ TÀI KHOẢN</p>
+                <a href="#">Liên hệ</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Đổi hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Sơ đồ trang</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>CHĂM SÓC KHÁCH HÀNG</p>
+                <a href="#">Thương hiệu</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Phiếu quà tặng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Cộng tác bán hàng</a>
+                <br>
+                <! -- chua -->
+
+            </div>
+            <div class="columntype3">
+                <p>THÔNG TIN CÔNG TY</p>
+                <p>53 Đõ Quang Đẩu, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM</p>
+                <p>097.9188.288</p>
+                <p>longbinhfood@gmail.com</p>
+                <p>MST: 0304457623</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

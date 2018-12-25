@@ -1,0 +1,62 @@
+/* Mo ta san pham */
+
+.mota {
+    padding: 20px;
+}
+
+.mota button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid red;;
+}
+
+.mota button:hover {
+    box-shadow: 0px 5px gray;
+}
+
+.mota input[type=number] {
+    width: 50px;
+    height: auto;
+    font-size: 22px;
+    border: 1px solid grey;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+}
+
+.font1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font2 {
+    font-size: 30px;
+}
+
+.hangton {
+    float: right;
+    background-color: aquamarine;
+    color: aliceblue;
+    padding: 0 10px;
+}
+
+/* Thong tin san pham */
+
+.tabsp {
+    margin: 0 150px;
+}
+
+.tabsp > button {
+    background-color: white;
+    border: 1px solid gray;
+    border-bottom: none;
+    padding: 10px;
+    /* margin: 0; */
+    /* float: left; */
+}
+
+.tabcontent > div {
+    background-color: white;
+    margin: -21px 139px 0;
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../kinhdoanh/tkdoanhthu.css">
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Biểu đồ thống kê đơn hàng, doanh thu - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="tkdoanhthu.js"></script>
+    <script src="../test.js"></script>
+</head>
+<body onload="build8(); themngay();">
+<header id="header1">
+</header>
+
+<nav>
+    <ul class="breadcrumb">
+        <li>
+            <a href="../">Trang chính</a>
+        </li>
+        <li>Biểu đồ đơn hàng, doanh thu</li>
+    </ul>
+</nav>
+
+<section>
+        <div id="exitWindow" >
+                <div class="modal-content">
+                    <span onclick="hideDetail1()" class="close">&nbsp&times;&nbsp</span>
+                    <b>&nbsp</b>
+                    <p> <br>Bạn có chắc lưu và bỏ qua những form chưa nhập?</p><br>
+                    <a onclick="luuvaokho()">Yes</a>
+                    <a onclick="hideDetail1()" style="background-color: red">No</a>
+                    <p></p>
+                </div>
+            </div>
+            <div id="exitWindow1" >
+                <div class="modal-content">
+                    <span onclick="hideDetail1()" class="close">&nbsp&times;&nbsp</span>
+                    <b>&nbsp</b>
+                    <p> <br>Dữ liệu sẽ không được lưu nếu bạn thoát?</p><br>
+                    <a onclick="thoat()" style="background-color: red; margin-left: 30%">Thoát</a>
+                    <a onclick="hideDetail1()" style="background-color: red">Trở Lại</a>
+                    <p></p>
+                </div>
+            </div>
+
+    <div id="thongtinmacdinh">
+        <div id="thongtinmacdinh" style="display:block;">
+            <b style="font-size: 20px; text-align: center; margin-left: 70px;">Bạn không có quyền sử dụng chức năng này</b><br>
+            <input type="button" onclick="window.location='../'" id="btnExit" value="Về Trang Chủ">
+        </div>
+    </div>
+    <div id="menuchucnang" style="display: none;">
+        <button id="nutxem" onclick="clickxem()" style="margin-left: 35%; margin-top: 80px">Biểu đồ Đơn hàng</button>
+        <button id="nutnhap" onclick="clicknhap()">Biểu đồ doanh thu</button>
+    </div>
+        <!-- </div>
+    <div id="nutchucnang" style="display: none;">
+        <button id="tongkho" onclick="tongkho()" style="margin-left: 20%" disabled>Xem chi tiết</button>
+        <button id="miennam" onclick="miennam()">Đã hoàn thành</button>
+        <button id="mientrung" onclick="mientrung()">Bị Hủy</button>
+        <button id="mienbac" onclick="mienbac()">Đang thực hiện</button>
+        <button id="xemchitiet1" onclick="xemchitiet1()">Theo Lịch</button>
+        <input type="date" id="ngayloc"  style="margin-left: 950px; margin-top: -40px"> <input type="button" value="LỌC" id="btnloc"  style="margin-left: 1110px; margin-top: -22px"><br><br>
+    </div>
+    <div id="bieudodonhang" style="display: none;">
+        <div id="bieudongay">
+                <p class="tieudedanhsach">Danh sách tất cả đơn hàng</p>
+                <table id="tableuser2">
+                    <tr>
+                            <th>STT</th>
+                            <th>Mã đơn hàng</th>
+                            <th>ID Khách hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Tình Trạng</th>
+                            <th>Kho</th>
+                            <th>ngày lập</th>
+                            
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmiennam">
+                <p class="tieudedanhsach">Danh sách các sản phẩm của kho miền Nam</p>
+                <table id="tablemiennam">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã đơn hàng</th>
+                        <th>ID Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Tình Trạng</th>
+                        <th>Kho</th>
+                        <th>ngày lập</th>
+                        <th>ngày hoàn thành</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmientrung">
+                <p class="tieudedanhsach">Danh sách các sản phẩm của kho miền Trung</p>
+                <table id="tablemientrung">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã đơn hàng</th>
+                        <th>ID Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Tình Trạng</th>
+                        <th>Kho</th>
+                        <th>ngày lập</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmienbac">
+                <p class="tieudedanhsach">Danh sách các sản phẩm của kho miền Bắc</p>
+            <table id="tablemienbac">
+                <tr>
+                    <th>STT</th>
+                    <th>Mã đơn hàng</th>
+                    <th>ID Khách hàng</th>
+                    <th>Tổng tiền</th>
+                    <th>Tình Trạng</th>
+                    <th>Kho</th>
+                    <th>ngày lập</th>
+                      </tr>
+        </table><br><br>
+        <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dschitiet">
+                <p class="tieudedanhsach">Danh sách chi tiết của từng sản phẩm</p>
+            <table id="tablechitiet">
+                <tr>
+                    <th>STT</th>
+                    <th>Mã đơn hàng</th>
+                    <th>ID Khách hàng</th>
+                    <th>Tổng tiền</th>
+                    <th>Tình Trạng</th>
+                    <th>ngày lập</th>
+                      </tr>
+        </table><br><br>
+        <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+    </div>
+    <div id="chucnangnhaphang" style="display: none;">
+        <p class="font3" style="margin-left: 30%">Thống Kê Số Lượng Đơn Hàng</p>
+        <div id="thongkesoluong" >
+                <p class="tieudedanhsach">Bảng thống kê</p>
+                <div id="chucnang" style="float: right; margin-right: 30%;">
+                    <button id="btntheongay" onclick="chontheongay()">Theo ngày</button>
+                    <button id="btntheothang" onclick="chontheothang()">Theo tháng</button>
+                    <button id="btntheonam" onclick="chontheonam()">Theo năm</button>
+                </div><br><br><br><br><br><br>
+                <div id="chucnang1" style="float: left; margin-left: 45%">
+                    <input type="date" id="chonngay" >
+                    <select id="chonthang">
+                        <option>Tháng 1</option>
+                        <option>Tháng 2</option>
+                        <option>Tháng 3</option>
+                        <option>Tháng 4</option>
+                        <option>Tháng 5</option>
+                        <option>Tháng 6</option>
+                        <option>Tháng 7</option>
+                        <option>Tháng 8</option>
+                        <option>Tháng 9</option>
+                        <option>Tháng 10</option>
+                        <option>Tháng 11</option>
+                        <option>Tháng 12</option>
+                    </select><br>
+                    <select id="chonnam">
+                            <option>năm 2020</option>
+                            <option>năm 2019</option>
+                            <option>năm 2018</option>
+                            <option>năm 2017</option>
+                            <option>năm 2016</option>
+                        </select>
+                    <button id="btnstart" onclick="batdauloc()">Bắt Đầu</button>
+                </div>
+                <table id="tablesoluong">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ngày</th>
+                        <th>Tổng ĐH hoàn thành</th>
+                        <th>Tổng ĐH bị hủy</th>
+                        <th>Tổng ĐH đang thực hiện</th>
+                        <th>Tổng Doanh Thu</th>
+                    </tr>
+            </table><br><br>
+            <button onclick="window.location='../'" style="margin-left: 45%" >Về trang chủ</button> <!-- reset lại giá trị trên khung nhập -->
+        </div>
+    </div> -->
+</section>
+    
+</body>
+<footer>
+        <div class="row">
+            <div class="columntype1">
+                <img src="../HinhAnh/lbf.png" alt="Longbinhfood" width="150" height="100">
+                <p>Hiện tại và tương lai chúng tôi cố gắng cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ
+                    sinh trên
+                    toàn quốc. - </p>
+                <b>Nguyen Thanh Phi Long (CEO)</b>
+            </div>
+            <div class="columntype2">
+                <p>THÔNG TIN</p> 
+                <a href="../Gioi thieu/Gioi_thieu.html">Thông tin chúng tôi</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Thông tin giao hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Chính sách bảo mật thông tin khách hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Điều khoản và điều kiện</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>QUẢN LÝ TÀI KHOẢN</p>
+                <a href="#">Liên hệ</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Đổi hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Sơ đồ trang</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>CHĂM SÓC KHÁCH HÀNG</p>
+                <a href="#">Thương hiệu</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Phiếu quà tặng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Cộng tác bán hàng</a>
+                <br>
+                <! -- chua -->
+
+            </div>
+            <div class="columntype3">
+                <p>THÔNG TIN CÔNG TY</p>
+                <p>53 Đõ Quang Đẩu, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM</p>
+                <p>097.9188.288</p>
+                <p>longbinhfood@gmail.com</p>
+                <p>MST: 0304457623</p>
+            </div>
+        </div>
+
+</footer>
+
+</html>

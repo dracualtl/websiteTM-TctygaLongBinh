@@ -1,0 +1,82 @@
+/* Hien thi danh sach san pham */
+
+.danhsach {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.danhsach > div img {
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.sanpham {
+    width: 20%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    text-align: center;
+    border: solid 1px #b8b894;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.sanpham:hover {
+    box-shadow: 0 3px 10px 3px grey;
+}
+
+.sanpham > div {
+    border-top: 1.5px solid #ccccb3;
+    border-radius: 5px;
+    height: 100px;
+}
+
+.sanpham > div p {
+    margin: 10px 0 0;
+}
+
+
+.danhsach > .sanpham a {
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    font-size: 15px;
+}
+
+.danhsach > .sanpham a:hover {
+    color: blue;
+}
+/* New:*/
+/* Change screen */
+
+@media screen and (max-width: 1200px) {
+    .sanpham.sp {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sanpham {
+        width: 45%;
+    }
+
+    .sanpham.sp {
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sanpham {
+        width: 100%;
+        
+    }
+    .sanpham.sp {
+        height: 50px;
+    }
+}
+
+/* New */

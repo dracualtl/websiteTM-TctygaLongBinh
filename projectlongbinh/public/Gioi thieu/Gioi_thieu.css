@@ -1,0 +1,38 @@
+section {
+    font-family: arial;
+    font-size: 14px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+
+img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minipic {
+    max-width: 500px;
+    max-height: 1000px;
+}
+
+.title {
+    color: red;
+}
+
+.size1 {
+    font-size: 30px;
+}
+
+.size2 {
+    font-size: 25px;
+}
+
+.size3 {
+    font-size: 18px;
+}
+
+
+
+

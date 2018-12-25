@@ -1,0 +1,26 @@
+[
+    {
+    "ID":"admin",
+    "PASS":"admin",
+    "MAND" : "AD"
+    },
+    {
+        "ID":"nhanvienbh",
+        "PASS":"nhanvienbh",
+        "MAND" : "NVBH"
+        },
+        {
+            "ID":"nhanvienkd",
+            "PASS":"nhanvienkd",
+            "MAND" : "NVKD"
+            },
+            {
+                "ID":"nhanviengh",
+                "PASS":"nhanviengh",
+                "MAND" : "NVGH"
+                },{
+                    "ID":"khachhang",
+                    "PASS":"khachhang",
+                    "MAND" : "KH"
+                    }
+]

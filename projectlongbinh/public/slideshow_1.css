@@ -1,0 +1,70 @@
+.slideshow-container {
+    width: 100%;
+    height: auto;
+    position: static;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.slideshow-container img {
+    width: 100%;
+}
+
+.galleryshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+    float: left;
+}
+
+.slide {
+    display: none;
+}
+/* New: thêm */
+.slideimg {
+    display: none;
+}
+/* New */
+.nextbtn, .prevbtn {
+    cursor: pointer;
+    position: absolute;
+    top: 250px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.nextbtn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevbtn:hover, .nextbtn:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: gray;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+

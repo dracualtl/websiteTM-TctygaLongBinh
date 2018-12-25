@@ -1,0 +1,336 @@
+/* Hien thi danh sach san pham */
+
+#danhsach {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#danhsach > div img {
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.sanpham {
+    width: 20%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    text-align: center;
+    border: solid 1px #b8b894;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.sanpham:hover {
+    box-shadow: 0 3px 10px 3px grey;
+}
+
+.sanpham > div {
+    border-top: 1.5px solid #ccccb3;
+    border-radius: 5px;
+    height: 100px;
+}
+
+.sanpham > div p {
+    margin: 10px 0 0;
+}
+
+
+
+#danhsach > .sanpham a {
+    text-decoration: none;
+    color: black;
+    font-style: oblique;
+    font-size: 15px;
+}
+
+#danhsach > .sanpham a:hover {
+    color: blue;
+}
+/* New:*/
+/* Change screen */
+
+@media screen and (max-width: 1200px) {
+    .sanpham.sp {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sanpham {
+        width: 45%;
+    }
+
+    .sanpham.sp {
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sanpham {
+        width: 100%;
+        
+    }
+    .sanpham.sp {
+        height: 50px;
+    }
+}
+
+.sp span > button {
+    display: none;
+    position: absolute;
+    bottom: 30%;
+    color: white;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    z-index: 3;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgb(253, 1, 1);
+    
+}
+
+.listnut button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#formthem{
+    font-size: 10px;
+    width:700px;
+    height:auto;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    border:5px solid black;
+}
+
+
+/* .gia > button.doigiaNV1 {
+    background-color: rgb(3, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    box-shadow: 0 2px #999;
+    margin-left: 10px;
+} */
+
+/* .gia > button .doigiaNV{
+    background-color: rgb(3, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px #999;
+}
+.gia > button .doigiaNV1{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px #999;
+} */
+
+/* .gia > button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+} */
+
+
+/* New */
+
+.gia > button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px #999;
+    display: none; 
+    margin-top: 10px;
+}
+
+.gia > button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.gia {
+    margin: auto;
+}
+
+.gia > b {
+    font-size: 20px;
+}
+
+
+#xacnhanxoasp, #khuyenmai{ 
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 90%; 
+    overflow: auto;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+ #xacnhanxoasp a {
+    padding: 5px 15px;
+    margin-left: 15px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px gray; 
+}
+ #xacnhanxoasp a:active {
+    box-shadow: none;
+    margin-left: 16px;
+    margin-bottom: 1px;
+}
+
+#xacnhanxoasp {
+    background-color: rgba(255,255,255,0);
+    font-size: 18px;
+}
+
+#xacnhanxoasp .modal-content {
+    width: 30%;
+    border-radius: 5px;
+}
+
+#xacnhanxoasp b {
+    background-color: blue;
+    margin: -5px -1px 0;
+    padding-right: 99.5%;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#xacnhanxoasp .close {
+    right: 35%;
+    color: white;
+    border-radius: 5px;
+}
+
+#xacnhanxoasp .close:hover {
+    background-color: red;
+}
+
+
+
+#khuyenmai a {
+    padding: 5px 15px;
+    margin-left: 15px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px gray; 
+}
+#khuyenmai a:active {
+    box-shadow: none;
+    margin-left: 16px;
+    margin-bottom: 1px;
+}
+
+#khuyenmai {
+    background-color: rgba(255,255,255,0);
+    font-size: 18px;
+}
+
+#khuyenmai .modal-content {
+    width: 30%;
+    border-radius: 5px;
+}
+
+#khuyenmai b {
+    background-color: blue;
+    margin: -5px -1px 0;
+    padding-right: 99.5%;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#khuyenmai .close {
+    right: 35%;
+    color: white;
+    border-radius: 5px;
+}
+
+#khuyenmai .close:hover {
+    background-color: red;
+}
+
+#editForm{ 
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 90%; 
+    overflow: auto;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+}
+
+#editForm {
+    background-color: rgba(255,255,255,0);
+    font-size: 18px;
+}
+
+#editForm b {
+    font-size: 35px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#editForm img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+#editForm input[type=text], #editForm input[type=date], #editForm select{
+    font-size: 18px;
+    float: right;
+    width: 60%;
+}
+
+#editForm select {
+    width: 60.7%;
+}
+
+#editForm a{
+    padding: 5px 15px;
+    margin-left: 15px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px gray; 
+}
+
+#editForm a:active{
+    box-shadow: none;
+    margin-left: 16px;
+    margin-bottom: 1px;
+}
+

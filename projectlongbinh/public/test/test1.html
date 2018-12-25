@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>long bình food - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="../test.js"></script>
+    </head>
+    <body>
+            <p>Mã sản phẩm: <input id="mahang" type="text" placeholder="Nhập mã sản phẩm"></p>
+            <p>Tên sản phẩm: <input id="tenhang" type="text" placeholder="Nhập tên sản phẩm"></p>
+            <p>Giá: <input style="margin-left: 32%" id="giahang" type="number" min="1000" max="999000" value="50000"> VND</p>
+            <p>Quy cách: <input id="quycach" type="text" placeholder="VD: Góc tư, Đầu, Chân..."></p>
+        <form action="http://localhost:3000/upload" method="Post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file">
+            <input type="submit" value="xem ảnh">
+        </form>
+        <button onclick="check()">check </button>
+    </body>
+</html>

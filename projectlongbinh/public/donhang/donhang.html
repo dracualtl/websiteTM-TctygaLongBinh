@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" type="text/css" href="../navigation.css">
+        <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+        <link rel="stylesheet" type="text/css" href="../page.css">
+        <link rel="stylesheet" type="text/css" href="../donhang/donhang.css">
+        <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+        <meta charset="uft-8">
+        <script src="../jquery.js"></script>
+        <script src="../test.js"></script>
+        <script src="donhang.js"></script>
+
+</head>
+
+<body onload="build3()";  >
+    <header id="header1" >
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../">Trang chính</a>
+            </li>
+            <li>Đơn hàng</li>
+        </ul>
+    </nav>
+    <!-- hien dialog -->
+    <div id="exitWindow" >
+        <div class="modal-content">
+            <span onclick="hideDetail()" class="close">&nbsp&times;&nbsp</span>
+            <b>&nbsp</b>
+            <p> <br>Bạn có muốn hủy đơn hàng?</p><br>
+            <b class="sttxoa" style="display: none;"></b>
+            <b class="stylexoa" style="display: none;"></b>
+            <input type="text" id="txtHuy" placeholder="Nhập lí do hủy đơn hàng" style="margin-left: 12px;"><br><br><br>
+            <a onclick="cancel(document.getElementsByClassName('sttxoa')[0].textContent,document.getElementsByClassName('stylexoa')[0].textContent)" style="background-color: red; margin-left: 30%">Yes</a>
+            <a onclick="document.getElementById('exitWindow').style.display='none';" style="background-color: red">No</a>
+            <p></p>
+        </div>
+    </div>
+    <!-- <div id="exitWindow" >
+        <div class="modal-content">
+            <span onclick="hideDetail()" class="close">&nbsp&times;&nbsp</span>
+            <b>&nbsp</b>
+            <p><br>Bạn có muốn hủy đơn hàng?</p>
+            <input type="text" id="txtHuy" placeholder="Nhập lí do hủy đơn hàng"><br><br><br>
+            <a onclick="alert('Yes')" style="background-color: red; margin-left: 30%">Yes</a>
+            <a onclick="alert('No')" style="background-color: red">No</a>
+            <p></p>
+        </div>
+    </div> -->
+    <div id="md">
+        <div class="modal-content">
+            <span onclick="hideDetail()" class="close">&times;</span>
+            <div class="phantren">
+                    <b style="font-size: 30px; text-align: center; padding-left: 10%">Long Bình Food - Công Ty TNHH Chăn Nuôi Long Bình</b><br><br>
+                <b style="font-size: 25px; text-align: center; padding-left: 35%">Đơn hàng chi tiết</b><br><br>
+                <div class="thongtindonhang">
+                <b style="font-size: 20px">Thông tin đơn hàng</b><br><br>
+                <span >Mã đơn hàng: <b class="lmadh">0123</b></span><br><br>
+                <span >Ngày lập đơn hàng: <b class="lngaydh">0123</b></span><br><br>
+                <span >Hình Thức Thanh Toán: <b class="lhtdh">0123</b></span><br><br>
+                <span>Tình trạng đơn hàng: <b class="lttdh">0123</b></span><br><br>
+                <span class="hienthilido" style="display: none;">Lí do:  <b class="llddh">0123</b></span><br><br>
+                </div>
+                <div class="thongtinkhachhang">
+                <b style="font-size: 20px">Thông tin khách hàng</b><br><br>
+                <span >Tên Khách hàng : <b class="tenkh">0123</b></span><br><br>
+                <span >Địa chỉ khách hàng : <b class="dckh">0123</b></span><br><br>
+                <span>Số điện thoại khách hàng : <b class="sdtkh">0123</b></span><br><br>
+                <span >Ghi chú khách hàng : <b class="gckh">0123</b></span><br><br><br>
+                <span class="anhthanhtoan" style="display: none;">Ảnh:  <div class="hovergallery">
+                        <img id="imagesp3" src="../HinhAnh/addFood.png" alt="anh" width="500px" height="500px" style="margin-left: -150px; margin-top: -270px; position: absolute; background-color: black">
+                </div></span><br><br>
+                
+                </div>
+                
+            </div>
+            
+            <div class="phangiua">
+                    <br><br><br><br>_____________________________________________________________________________________________________________________________<br><br>
+                <b style="font-size: 20px; padding-top: 2px;">Danh sách các sản phẩm</b><br><br>
+                <table id="tablesanpham">
+                </table>
+                <br>
+                <span style="font-size: 20px; padding-left: 75%">Tống tiền : <b class="tongtien">100000</b> VND</span>
+                <span style="font-size: 20px; padding-left: 75%">Phí ship : <b class="phiship">115000</b> VND</span>
+                <span style="font-size: 20px; padding-left: 75%">Tống cộng : <b class="tongcong">100000</b> VND</span><br><br><br><br>
+                _____________________________________________________________________________________________________________________________<br><br>
+    
+
+            </div>
+            <div class="phancuoi">
+                <b style="font-size: 25px; padding-left: 30%">Long Bình xin cảm ơn quý khách</b><br>
+                <b style="font-size: 25px; padding-left: 45%">Hẹn gặp lại</b><br><br><br>
+            </div>
+        </div>
+    
+</div>
+    <!-- Show danh sach san pham trong gio hang -->
+        <div id="thongtinmacdinh" style="display:block;">
+                <b style="font-size: 20px; text-align: center; margin-left: 70px;">Đơn hàng cần duyệt trống hoặc bạn chưa đăng nhập</b><br>
+                <input type="button" id="btnExit" value="Về Trang Chủ">
+        </div>
+        <div id="dsdonhangcanduyet">
+                <p class="tieudedanhsach">Danh sách đơn hàng chờ duyệt</p>
+        </div>
+        <div id="dsdonhangchuyen">
+                <p class="tieudedanhsach1">Danh sách đơn hàng chờ chuyển</p>
+        </div>
+
+        <!-- <div id="dssanpham22">
+                <p class="tieudedanhsach">Thanh toán</p>
+                <form>
+                        <b style="font-size: 20px; padding-left: 5%">Mời bạn chọn hình thức thanh toán?</b>
+                            <input type="radio" name="colors" id="tt" checked><b style="font-size: 20px;" >Trực tiếp</b>
+                            <input type="radio" name="colors" id="nh"><b style="font-size: 20px;" >Ngân hàng</b>
+                        <input type="button" onclick="kiemtraradio()" value="Đổi">
+                </form>
+                <div id="tttt">
+                        <br><br><b style="font-size: 20px;  padding-left: 5%;">Mời Bạn Chọn Khu Vực :  </b>
+                        <select id="mySelect2" onmouseout="chonkv1();">
+                                <option>Miền Nam</option>
+                                <option>Miền Trung</option>
+                                <option>Miền Bắc</option>
+                        </select><br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Địa chỉ chi tiết (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtdc" placeholder="Nhập Địa chỉ nhận hàng của bạn" style="margin-left: 52px">
+                        <br><br>
+                        <input type="checkbox" name="cbldl" onmousemove="choncb1()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;"/><b style="font-size: 15px;">Lấy địa chỉ trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Số điện thoại liên hệ (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtsdt" placeholder="Nhập SDT nhận hàng của bạn" style="margin-left: 2px">
+                        <br><br>
+                        <input type="checkbox" name="cbldl" onmousemove="choncb1()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;" /><b style="font-size: 15px;">Lấy số điện thoại trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Ghi Chú :  </b>
+                        <input type="text" id="txtgc" placeholder="Nhập ghi chú nếu có" style="margin-left: 132px;">
+                        <br><br><br><br>
+                </div>
+                <div id="ttnh" style="display: none;">
+                        <p style="font-size: 15px; padding-left: 5%">Bạn chọn ngân hàng bạn đang dùng để chuyển khoản ứng với ngân hàng của nhân viên trong danh sách bên dưới:</p>
+                        <select id="mySelect1" style="font-size: 30px; margin-left: 5%;" onmouseout="chonnh();">
+                                <option>Agribank</option>
+                                <option>Sacombank</option>
+                                <option>Vietcombank</option>
+                                <option>Vietinbank</option>
+                        </select><br><br>
+                        <div id="agri">
+                        <b style="font-size: 20px; padding-left: 8%">NV. Nguyễn Văn Tèo  STK: 07007891234</b><br>
+                        <b style="font-size: 20px; padding-left: 8%">NV. Trần Văn Tũn  STK: 07007832444</b><br>
+                        </div>
+                        <div id="sac" style="display: none;">
+                            <b style="font-size: 20px; padding-left: 8%">NV. Lê Lung Linh  STK: 904359939053</b><br>
+                            <b style="font-size: 20px; padding-left: 8%">NV. Trần Trọc  STK: 904359939053</b><br>
+                        </div>
+                        <div id="vietc" style="display: none;">
+                            <b style="font-size: 20px; padding-left: 8%">NV. Trần Không Tên  STK: 438783875385873</b><br>
+                            <b style="font-size: 20px; padding-left: 8%">NV. Nguyễn Bá Đạo  STK: 438783875385874</b><br>
+                        </div>
+                        <div id="viett" style="display: none;">
+                            <b style="font-size: 20px; padding-left: 8%">NV. Dương Hóa  STK: 3284728482489</b><br>
+                            <b style="font-size: 20px; padding-left: 8%">NV. Cô Long  STK: 3284728482488</b><br>
+                        </div>
+                        <br><br><b style="font-size: 20px;  padding-left: 5%;">Mời Bạn Chọn Khu Vực :  </b>
+                        <select id="mySelect3" onmouseout="chonkv2();">
+                                <option>Miền Nam</option>
+                                <option>Miền Trung</option>
+                                <option>Miền Bắc</option>
+                        </select><br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Mã chuyển khoản (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtmack" placeholder="Nhập Mã giao dịch chuyển khoản" style="margin-left: 25px;">
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Địa chỉ chi tiết (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtdc1" placeholder="Nhập Địa chỉ nhận hàng của bạn" style="margin-left: 53px;">
+                        <br><br>
+                        <input type="checkbox" name="cbldl1" onmousemove="choncb2()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;"/><b style="font-size: 15px;">Lấy địa chỉ trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Số điện thoại liên hệ (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtsdt1" placeholder="Nhập SDT nhận hàng của bạn" style="margin-left: 2px;">
+                        <br><br>
+                        <input type="checkbox" name="cbldl1" onmousemove="choncb2()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;"/><b style="font-size: 15px;">Lấy địa chỉ trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Ghi Chú :  </b>
+                        <input type="text" id="txtgc1" placeholder="Nhập ghi chú nếu có" style="margin-left: 132px;">
+                        <br><br><br><br>
+                </div>
+        </div>
+        
+        <div id="nutthanhtoan" style="display: none;">
+            <b style="font-size: 25px; margin-left: 37%; margin-bottom: 10%;">Tổng Tiền Sản Phẩm: </b><b class="tongtien" style="font-size: 30px; "> 0</b><b style="font-size: 25px">  VND</b><br>
+            <b style="font-size: 25px; margin-left: 37%; margin-bottom: 10%;">Phí Ship: </b><b class="phiship" style="font-size: 30px; "> 15000</b><b style="font-size: 25px">  VND</b><br>
+            <b style="font-size: 25px; margin-left: 37%; margin-bottom: 10%;">Tổng Cộng: </b><b class="tongcong" style="font-size: 30px; "> 0</b><b style="font-size: 25px">  VND</b><br>
+            <input type="button" id="btnPay" value="Thanh Toán">
+        </div> -->
+        
+        <footer id="ft1">
+            
+        </footer>
+</body>
+
+</html>

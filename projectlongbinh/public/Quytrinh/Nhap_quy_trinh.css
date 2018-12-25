@@ -1,0 +1,420 @@
+/* Form nhap du lieu */
+
+.formNhap {
+    margin-left: 10%;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formNhap p {
+    padding: 5px 10px;
+}
+
+.formNhap .form {
+    border: 2px solid gray;
+    background-color: aliceblue;
+    width: 40%;
+    margin: 10px 10px;
+}
+
+#themQuyTrinh {
+    border: 2px solid gray;
+    background-color: aliceblue;
+    margin: 10px 10px;
+    display: none;
+    width: 40%;
+
+}
+
+.formNhap input[type=text], .formNhap input[type=number], .formNhap input[type=date], .formNhap select {
+    margin-right: 10%;
+    float: right;
+    margin-top: -5px;
+    padding: 5px;
+    width: 55%;
+}
+
+
+.formNhap select {
+    width: 57.7%;
+}
+
+.formNhap div > div {
+    width: 50%;
+}
+
+.formNhap p > button{
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+/* Form phụ */
+#formXoa, #formHoanThanh {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 90%; 
+    overflow: auto;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    background-color: rgb(223, 221, 221);
+    background-color: rgba(223, 221, 221, 0.3);
+}
+
+#formXoa p, #formHoanThanh p {
+    margin: 25px 15px 10px;
+    font-size: 20px;
+}
+
+#formHoanThanh td {
+    margin: 25px 15px 10px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#formHoanThanh td > input, #formHoanThanh td > select {
+    font-size: 18px;
+    padding: 5px 0 5px 5px;
+    width: 90%;
+}
+
+#formHoanThanh td > select {
+    width: 92%;
+}
+
+#formXoa button, #formHoanThanh button {
+    width: 100px;
+    padding: 5px 0;
+    font-size: 16px;
+    box-shadow: 2px 2px gray;
+}
+
+#formXoa button:active, #formHoanThanh button:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+
+
+/* Dãy nút ở hàng đầu tiên */
+.formNhap1 {
+    margin-left: 10%;
+}
+
+.formNhap1 button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+.formNhap1 input[type=text] {
+    padding: 10px 20px 10px 40px; 
+    background-image: url('../HinhAnh/search.png'); 
+    background-position: 5px; 
+    background-repeat: no-repeat; 
+    background-size: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 30%;
+}
+
+/* Ẩn chi tiết */
+.suaSp, .xemSp {
+    display: none;
+}
+
+.cheBienBtn {
+    display: none;
+}
+
+.xemSp table, .suaSp table {
+    background-color: rgb(199, 187, 187);
+    margin: 20px 0 20px -5%;
+    width: 110%;
+    border: 1px ridge gray;
+    font-size: 22px;
+    padding: 20px 10%;
+    text-align: center;
+    position: relative;
+}
+
+.xemSp > table tr, .suaSp > table tr {
+    position: relative;
+    width: 80%;
+    margin: 20px 10%;
+    background-color: rgba(255, 255, 255, 0.658);
+}
+
+.xemSp > table td, .suaSp > table td {
+    padding: 10px 0;
+}
+
+.suaSp input[type=text], .suaSp input[type=date], .suaSp select {
+    position: relative;
+    width: 90%;
+    font-size: 20px;
+    padding: 3px 0 3px 3px;
+}
+
+.suaSp input[type=number] {
+    position: relative;
+    width: 85%;
+    font-size: 18px;
+    padding: 3px 0 3px 3px;
+}
+
+.suaSp button {
+    position: relative;
+    width: 35%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.suaSp img {
+    width: 100%;
+    margin: auto auto;
+}
+
+
+/* Thanh tien trinh */
+.progressBar {
+    position: relative;
+    background-color: gray;
+    width: 90%;
+    height: 30px;
+    font-size: 30px;
+}
+
+.progress {
+    position: absolute;
+    background-color: green; 
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+}
+
+/* Form che bien */
+#cheBien {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 90%; 
+    overflow: auto;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    padding-top: 100px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5); 
+}
+
+#cheBien .modal-content {
+    border: 2px ridge black; 
+    width: 60%;
+}
+
+.modal-content select, .modal-content input[type=date] {
+    font-size: 18px;
+    padding: 5px 0 5px 5px;
+}
+
+#cbTable {
+    position: relative;
+    width: 100%;
+    background-color: rgb(214, 207, 207);
+    text-align: center;
+    padding: 20px 15%;
+}
+
+#cbTable tr {
+    position: relative;
+    width: 50%;
+    padding: 20px 30%;
+    background-color: white;
+}
+
+#cbTable tr > td input[type=number] {
+    position: relative;
+    width: 50%;
+    padding: 5px 0 5px 5px;
+}
+
+#cbTable tr > td input[type=date] {
+    position: relative;
+    width: 80%;
+    padding: 5px 0 5px 5px;
+}
+
+#cheBien p {
+    padding: 0 20px;
+}
+
+#cheBien b {
+    font-size: 35px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#cheBien div > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cheBien button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 90px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+#cheBien button:active {
+    transform: translateY(2px);
+}
+
+.cotNl div, .cotSp div, .cotChoRa div {
+    flex: 100%;
+}
+
+.cotSp div, .cotChoRa div {
+    height: 70px;
+}
+
+.cotSp button, .cotNl button {
+    width: 18%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+    margin-right: 4px; 
+    font-size: 15px;
+}
+
+.cotSp button:active, .cotNl button:active, .form button:active {
+    transform: translate(2px, 2px);
+}
+
+
+.cotNl {
+    flex: 35%;
+    padding: 5px 0 5px 1%;
+    background-color: rgb(168, 164, 164, 0.3);
+    border-right: 2px ridge black; 
+    border-bottom: 2px ridge black; 
+}
+
+.cotNl p, .cotChoRa p {
+    height: 30px;
+    flex: 100%;
+    margin: auto 0;
+}
+
+.cotNl button {
+    font-size: 20px;
+    width: 22%;
+    height: 35px;
+    margin-top: 3px; 
+}
+
+.cotNl input {
+    width: 12%;
+    height: 25px;
+    font-size: 18px;
+}
+
+.cotSp {
+    flex: 51%;
+    padding: 5px 1% 5px 1%;
+    background-color: rgb(168, 164, 164, 0.3);
+    border-bottom: 2px ridge black; 
+}
+
+.cotSp p {
+    height: 30px;
+    flex: 13%;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.cotSp select {
+    flex: 25%;
+    height: 30px;
+}
+
+.cotSp span {
+    flex: 35%;
+    height: 30px;
+    text-align: center;
+}
+
+.cotSp input[type=number] {
+    width: 22%;
+    height: 25px;
+    font-size: 18px;
+}
+
+.cotSp input[type=date] {
+    width: 65%;
+    height: 25px;
+}
+
+.cotSp div {
+    border: 1px ridge gray;
+    padding: 3px 2px;
+    margin: 5px;
+}
+
+.cotChoRa {
+    flex: 10%;
+    padding: 5px 0 5px 0;
+    background-color: rgb(168, 164, 164, 0.3);
+    border-bottom: 2px ridge black; 
+    border-right: 2px ridge black; 
+}
+
+.cotChoRa p {
+    text-align: center;
+    height: 70px;
+    padding: 3px 2px;
+    margin: 5px;
+}
+
+.cotChoRa input {
+    width: 45%;
+    font-size: 20px;
+    padding: 1px 0 1px 3px;
+    margin: 0 0 2px;
+}
+
+#searchSpace {
+    display: none;
+    position: absolute;
+    margin-top: 0;
+    border: 1px ridge grey;
+    border-top: none;
+    background-color: white;
+    overflow: auto;
+    width: 397px;
+    height: 250px;
+    z-index: 3;
+}
+
+

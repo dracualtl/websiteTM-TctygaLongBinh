@@ -1,0 +1,88 @@
+section {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: red;
+}
+
+form[id=form1]{
+    display: flex;
+}
+
+input[type=text] {
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px 0;
+} 
+
+input[id=btnReg]{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    margin-left: 20%
+    
+  }
+  input[id=btnExit]{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    margin-left: 3%
+  }
+
+input[type=password] {
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px 0;
+} 
+
+
+.column1 {
+    flex: 5%;
+    text-align: right;
+}
+
+.column1 > p {
+    padding: 0 0 16px;
+}
+
+.column2 {
+    flex: 60%;
+    margin: 0 5%;
+}
+
+.font {
+    font-size: 20px;
+}

@@ -1,0 +1,262 @@
+#dssanpham11{
+    font-size: 10px;
+    width:700px;
+    height:auto;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    display: none;
+}
+
+#dssanpham22{
+    font-size: 10px;
+    width:700px;
+    height:auto;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    display: none;
+}
+
+input[type=text]{
+    width:400px;
+    height:auto;
+}
+
+.search input[type=text]{
+    left: 10px;
+    width:270px;
+    height:auto;
+}
+
+
+#danhsachsanpham{
+    font-size: 10px;
+    width:600px;
+    height:150px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    border:5px solid cornflowerblue;
+}
+.tieudedanhsach{
+    color: black;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.hinhanh{
+    width: 150px;
+    height: 150px;
+    left: 30%;
+    float: left;
+    background-color: beige;
+}
+
+.thongtinsanpham{
+    width: 300px;
+    height: 150px;
+    left: 1%;
+    float: left;
+    background-color: beige;
+}
+
+.cacnutchucnang{
+    width: 145px;
+    height: 150px;
+    right: 1%;
+    float: right;
+    background-color: beige;
+}
+
+
+.thongtinsanpham .tensp{
+    color: black;
+    font-size: 15px;
+    padding-left: 40px;
+}
+
+.thongtinsanpham .giasp{
+    color: black;
+    font-size: 15px;
+    padding-left: 40px;
+}
+
+.thongtinsanpham input[type=number]{
+    width: 50px;
+    height: auto;
+    font-size: 22px;
+    border: 1px solid grey;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+#danhsachsanpham .cacnutchucnang input[id=btnXoa]{
+  display: inline-block;
+  padding: 9px 19px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:  red;
+  border: none;
+  margin-top: 0%;
+  margin-left: 66%;
+  float: top;
+}
+
+#danhsachsanpham .cacnutchucnang input[type=checkbox]{
+  height: 40px;
+  width: 40px;
+  line-height: 12px;
+  margin-top: 5%;
+  margin-left: 37%;
+  /* //float: top; */
+
+}
+
+#nutthanhtoan input[type=button]{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 5%;
+  margin-bottom: 50px;
+  margin-left: 40%
+}
+
+#nutthanhtoan input[type=button]:hover{
+    background-color: #3e8e41
+}
+
+#nutthanhtoan input[type=button]:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#danhsachsanpham .hinhanh img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 130px;
+    width: 130px;
+}
+
+#danhsachsanpham .hinhanh img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#thongtinmacdinh {
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+#thongtinmacdinh input[id=btnExit]{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 5%;
+  margin-bottom: 50px;
+  margin-left: 15%
+}
+
+.hovergallery img{
+    -webkit-transform:scale(0.1); /*Webkit: Scale down image to 0.8x original size*/
+    -moz-transform:scale(0.1); /*Mozilla scale version*/
+    -o-transform:scale(0.1); /*Opera scale version*/
+    -webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
+    -moz-transition-duration: 0.5s; /*Mozilla duration version*/
+    -o-transition-duration: 0.5s; /*Opera duration version*/
+    opacity: 0.7; /*initial opacity of images*/
+    margin: 0 10px 5px 0; /*margin between images*/
+    }
+    .hovergallery img:hover{
+    -webkit-transform:scale(1.1); /*Webkit: Scale up image to 1.2x original size*/
+    -moz-transform:scale(1.1); /*Mozilla scale version*/
+    -o-transform:scale(1.1); /*Opera scale version*/
+    box-shadow:0px 0px 30px gray; /*CSS3 shadow: 30px blurred shadow all around image*/
+    -webkit-box-shadow:0px 0px 30px gray; /*Safari shadow version*/
+    -moz-box-shadow:0px 0px 30px gray; /*Mozilla shadow version*/
+    opacity: 1;
+    }
+
+
+    #xacnhanmua{ 
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 90%; 
+        overflow: auto;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        padding-top: 100px;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.5);
+    }
+
+     #xacnhanmua a {
+        padding: 5px 15px;
+        margin-left: 15px;
+        border: 1px solid gray;
+        box-shadow: 2px 2px gray; 
+    }
+    
+    #xacnhanmua a:active {
+        box-shadow: none;
+        margin-left: 16px;
+        margin-bottom: 1px;
+    }
+    
+    #xacnhanmua {
+        background-color: rgba(255,255,255,0);
+        font-size: 18px;
+    }
+    
+    #xacnhanmua .modal-content {
+        width: 30%;
+        border-radius: 5px;
+    }
+    
+    #xacnhanmua b {
+        background-color: blue;
+        margin: -5px -1px 0;
+        padding-right: 99.5%;
+        padding-top: 1px;
+        padding-bottom: 20px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
+    #xacnhanmua .close {
+        right: 35%;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    #xacnhanmua .close:hover {
+        background-color: red;
+    }

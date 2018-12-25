@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>long bình food - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="../test.js"></script>
+</head>
+
+<body onload="build(); themtimkiem();">
+    <header id="headerchung">
+        <div id="navbar" class="navbar">
+
+            <!-- Home -->
+            <a href="../" style="padding: 15px 10px 5px 20px">
+                <img src="../lbf.png" alt="Longbinhfood" width="150" height="50">
+            </a>
+            <!-- Gioi thieu -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="../Gioi thieu/Gioi_thieu.html">Giới thiệu</a>
+                </button>
+            </div>
+            <!-- San pham -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a>Sản phẩm</a>
+                    <!-- chua -->
+                </button>
+                <div class="dropdown-content">
+                    <div class="sub-dropdown">
+                            <a href="../San pham/tatcasp.html"><b>Gà tươi</b></a>
+                        <div class="sub-content fixed">
+                            <a onclick="xemchitiet('a3')">Cánh gà</a>
+                            <a onclick="xemchitiet('a7')">Chân gà</a>
+                            <a onclick="xemchitiet('a10')">Đầu gà</a>
+                            <a onclick="xemchitiet('a2')">Đùi tỏi</a>
+                            <a onclick="xemchitiet('a1')">Gà góc tư (Quater leg)</a>
+                            <a onclick="xemchitiet('a5')">Ức gà (nguyên xương da)</a>
+                            <a onclick="xemchitiet('a6')">Ức gà (có da)</a>
+                            <a onclick="xemchitiet('a4')">Ức gà Fillet (không da)</a>
+                            <a onclick="xemchitiet('a8')">Sản phẩm phụ</a>
+                        </div>
+                    </div>
+                    <a onclick="xemchitiet('a9')"><b>Gà nguyên con</b></a>
+                    <a href="../San pham/tatcasp.html"><b>Tất cả sản phẩm</b></a>
+                </div>
+            </div>
+            <!-- Tin tuc -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a>Tin tức</a>
+                    <!-- chua -->
+                </button>
+                <div class="dropdown-content">
+                    <a href="../TinTuc/Khuyen_mai.html">Khuyến mãi</a>
+                    <a href="../TinTuc/Su_kien.html">Sự kiện</a>
+                    <a href="../TinTuc/Bep_lb.html">Bếp Long Bình</a>
+                </div>
+            </div>
+            <!-- He thong -->
+            <div class="dropdown">
+                    <button class="dropbtn">
+                        <a>Hệ thống</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="sub-dropdown">
+                            <a>Hệ Thống Chăn Nuôi</a>
+                            <div class="sub-content">
+                                <a href="../HeThong/Trai_giong.html">Trại giống</a>
+                                <a href="../HeThong/Nha_may_ap.html">Nhà máy ấp</a>
+                                <a href="../HeThong/Trai_nuoi_ga_thit.html">Trại nuôi gà thịt</a>
+                            </div>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a>Hệ Thống Sản Xuất</a>
+                            <div class="sub-content">
+                                <a href="../HeThong/He_thong_giet_mo.html">Hệ thống giết mổ</a>
+                                <a href="../HeThong/He_thong_van_tai.html">Hệ thống vận tải</a>
+                            </div>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a>Hệ Thống Phân Phối Sản Phẩm</a>
+                            <div class="sub-content">
+                                <a href="../HeThong/He_thong_fastfood.html">Hệ thống FastFood</a>
+                                <a href="../HeThong/Cho_truyen_thong.html">Chợ truyền thống</a>
+                                <a href="../HeThong/He_thong_ban_le.html">Hệ thống bán lẻ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            <!-- Lien he -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="../Lien he/Lien_he.html">Liên hệ</a>
+                </button>
+            </div>
+            <div class="dropdown right" style="padding-right: 11%">
+            <div id="formcuaadmin111" class="dropdown right" >
+                <button class="dropbtn">
+                    <p onmouseover="EventHandler()"><img name="image3cham" src="../3 cham.png" alt="3 cham" width="45" height="45"></p><b id="sotb" style="color: red ; font-size: 20px; top:12px; right: 155px; position: absolute">0</b>
+                </button>
+                <p id="lbxinchao" style=" top:45px; left: 80%; position: absolute">Xin chào, <b id="iduser" style="color: navy">Khách hàng</b> </p>
+            </div>
+            <div id="chuadangnhap" class="dropdown right" style="display: none">
+                <div class="dropdown-content rdrop">
+                        <form class="" action="/login" method="post">
+                            <br>
+                            <img src="http://localhost:3000/images/user.png" alt="anh" width="20px" height="20px"><input type="text" name="username" placeholder="username" autocomplete="off"><br><br>
+                            
+                            <img src="http://localhost:3000/images/pass.png" alt="anh" width="20px" height="20px"><input type="password" name="password" placeholder="password" autocomplete="off"><br>
+                            <a onclick="laylaimatkhau()" style="font-size: 12px">Lấy lại mật khẩu</a>
+                            <input type="submit" name="" value="Đăng Nhập" style="margin-left: -20px;">
+                        </form>
+                    
+
+                        <a href="../Tai khoan/Dang_ky.html">Chưa có tài khoản ? Tạo Ngay</a>
+
+                    <p></p>
+                </div>
+            </div>
+            <div id="cankichhoat" class="dropdown right" style="display: none">
+                <div class="dropdown-content rdrop">
+                    <br>
+                            <center><input type="text" id="txtmakichhoat" placeholder="Nhập mã kích hoạt" autocomplete="off"><br><br>
+                            <center><input type="button" id="btnkichhoat" value="Kích hoạt">
+                    
+
+                            <a href="" onclick="logout()">Đăng xuất</a>
+                    <p></p>
+                </div>
+            </div>
+            <div id="khachhang" class="dropdown right" style="display:none">
+                <div class="dropdown-content rdrop">
+                    <a href="../thongtin/capnhatthongtin.html">Cập nhật tài khoản</a>
+                    <a href="../Tai khoan/lichsu.html">Xem lịch sử giao dịch</a>
+                    <a href="../Tai khoan/theodoidonhang.html">Theo dõi đơn hàng</a>
+                    <a href="" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+            <div id="nhanvienbanhang" class="dropdown right" style="display:none">
+                <div class="dropdown-content rdrop">
+                        <a href="../thongtin/capnhatthongtin.html">Cập nhật tài khoản</a>
+                    <a href="../donhang/donhang.html">Đơn hàng chờ duyệt (<b id="tbdhcd" style="color: red; font-size: 15px">0</b>)</a>
+                    <a href="../kho/kho.html">Quản lý kho </a>
+                    <a href="../San pham/tatcasp.html">Quản lý sản phẩm </a>
+                    <a href="../Quytrinh/Nhap_quy_trinh.html">Quy trình chăn nuôi</a>
+                    <a href="" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+            <div id="nhanviengiaohang" class="dropdown right" style="display:none">
+                <div class="dropdown-content rdrop">
+                    <a href="../thongtin/capnhatthongtin.html">Cập nhật tài khoản</a>
+                    <a href="../donhang/donhang.html">Đơn hàng chờ chuyển (<b id="tbdhcd1" style="color: red; font-size: 15px">0</b>)</a>
+                    <a href="" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+            <div id="nhanvienkinhdoanh" class="dropdown right" style="display:none">
+                <div class="dropdown-content rdrop">
+                    <a href="../thongtin/capnhatthongtin.html">Cập nhật tài khoản</a>
+                    <a href="../kinhdoanh/tkdonhang.html">Bảng thống kê đơn hàng,doanh thu</a>
+                    <a href="" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+            <div id="formcuaadmin" class="dropdown right" style="display:none">
+                <div class="dropdown-content rdrop">
+                    <a href="../quanly/taikhoan.html">Quản lý tài khoản</a>
+                    <a href="../San pham/tatcasp.html">Quản lý sản phẩm </a>
+                    <a href="../kho/kho.html">Quản lý kho </a>
+                    <a href="../kinhdoanh/tkdonhang.html">Bảng thống kê đơn hàng,doanh thu</a>
+                    <a href="" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+                
+            
+            <!-- Gio hang -->
+            <div class="dropdown right" style="margin-top: 0px;">
+                <button class="dropbtn" style="padding: 0">
+
+                        <p onmouseover="anhgiohang()"><img src="../giohang.png" alt="Giỏ hàng" width="50" height="50" style="position: relative; margin-right: 40px;"></p>
+                    <b id="sosp" style="color: darkblue ;font-size: 25px; top:10px; margin-right: 70px; position: absolute">0</b>
+                </button>
+                <div id="giohang" style="display:none">
+                <div class="dropdown-content1 rdrop">
+                    <a href="../giohang/giohang.html" style="font-size: 15px; padding-bottom: 0px">XEM GIỎ HÀNG</a>
+                    <!-- chua -->
+                    <p>_____________________________________</p>
+                    Giỏ hàng đang có <b id="ttgiohang" style="color: red">0</b> Sản Phẩm<br><br><br><br>
+                </div>
+                </div>
+            </div>
+            <!-- Tim kiem -->
+            <div class="search right" >
+                <input id="search1" onkeyup="onInputSearch()" type="text" style="width: 30px" onmousedown="setsizesearch()" onmouseout="setsizeout()">
+                <select id="menutimkiem" onchange="hientieude()">
+                    <option value="0">Tất cả</option>
+                    <option value="1">Tên Sản Phẩm</option>
+                    <option value="2">Khuyến mãi</option>
+                    <option value="3">Sự kiện</option>
+                    <option value="4">Bếp Long Bình</option>
+                </select>
+                <div id="searchSpace">
+                        <!-- <p><a href="">văn lý</a></p>
+                        <p><a href="">huy hai</a></p>
+                        <p><a href="">quang phong</a></p>
+                        <p><a href="">nhut truong</a></p>
+                        <p><a href="">minh hieu</a></p> -->
+                </div>
+            </div>
+            <br><br>
+        </div>
+        
+
+    </header>
+
+    <!-- New ( -->
+    <div class="side-box" style="left: 0">
+        <p onclick="CamNang()">CẨM NANG NẤU ĂN</p>
+        <div>
+            <span onclick="showSubBox(0)"><img src="../HinhAnh/ga-hap-xi-dau-long-binh.jpg" alt="anh">
+                Gà hấp xì dầu</span>
+
+            <span onclick="showSubBox(1)"><img src="../HinhAnh/gaquay4.png" alt="anh">
+                Gà nướng mật ong</span>
+
+            <span onclick="showSubBox(2)"><img src="../HinhAnh/chan6.jpg" alt="anh">
+                Chân gà ngâm mắm ớt chua ngọt</span>
+
+            <span onclick="showSubBox(3)"><img src="../HinhAnh/ga-ran-tai-nha.png" alt="anh">
+                Gà rán</span>
+
+            <span onclick="showSubBox(4)"><img src="../HinhAnh/dui-ga-ap-chao-xop-thom-long-binh.jpg" alt="anh">
+                Đùi áp chảo xốt thơm</span>
+
+            <span onclick="showSubBox(5)"><img src="../HinhAnh/com-ga-hai-nam-long-binh.jpg" alt="anh">
+                Cơm gà Hải Nam</span>
+
+            <span onclick="showSubBox(6)"><img src="../HinhAnh/ga-nuong-xien-que-long-binh.jpg" alt="anh">
+                Gà nướng xiên que</span>
+
+            <span onclick="showSubBox(7)"><img src="../HinhAnh/ga-chien-nuoc-mam.jpg" alt="anh">
+                Gà chiên nước mắm</span>
+
+            <span onclick="showSubBox(8)"><img src="../HinhAnh/13510873_265553337141339_1399069424200494536_n.jpg" alt="anh">
+                Gà rang lá chanh</span>
+
+            <span onclick="showSubBox(9)"><img src="../HinhAnh/ga-kho-me.png" alt="anh">
+                Gà kho me</span>
+        </div>
+    </div>
+
+    <div class="side-box sub">
+        <span id="cachLam" style="width: 60%"></span>
+        <span id="nguyenLieu" style="width: 30%;"></span>
+        
+    </div>
+    <div class="side-box" style="width: 200px; bottom: -270px">
+        <p onclick="TinNhan()">Tin Nhắn</p>
+        <div class="khungTinNhan">
+            <div id="khungtrai">
+                
+            </div>
+            <div id="khungphai">
+
+            </div>
+        </div>
+        <!-- <textarea name="Noi dung" id="ndTinNhan" cols="30" rows="10"></textarea> -->
+        <button onclick="guitinnhan()" >Vào chat</button>
+    </div>
+    
+    <!-- New ( -->
+    <section> 
+            <div id="xacnhanthem" >
+                    <div class="modal-content">
+                        <span onclick="hideDetail2()" class="close">&nbsp&times;&nbsp</span>
+                        <b>&nbsp</b>
+                        <p id="vtthem" style="display: none;"></p>
+                        <p> <br>Sản phẩm này hiện có số lượng là <span id="xnsl"></span>, bạn có chắc thêm?</p>
+                        <a onclick="themluon(document.getElementById('vtthem').textContent)" style="background-color: red; margin-left: 120px">Thêm</a>
+                        <a onclick="hideDetail2()" style="background-color: red">Hủy</a>
+                        <p></p>
+                    </div>
+                </div>
+        <div id="laylaimk" >
+            <div class="modal-content">
+                <span onclick="hideDetail2()" class="close">&nbsp&times;&nbsp</span>
+                <b>&nbsp</b>
+                <p> <br>Mời bạn nhập email đăng ký tài khoản?</p>
+                <input style="width: 200px; height: 20px; margin-left: 100px;" type="text" id="txtemail" placeholder="Nhập email của tài khoản"><br><br><br>
+                <a onclick="xulymatkhau()" style="background-color: red; margin-left: 120px">Lấy Lại</a>
+                <a onclick="hideDetail2()" style="background-color: red">Hủy</a>
+                <p></p>
+            </div>
+        </div>
+        <div id="md">
+            <div class="modal-content">
+                <span onclick="hideDetail()" class="close">&times;</span>
+                <div class="row" style="padding: 0 4% 0 4%">
+                    <!-- New ( -->
+                    <div class="columntype4">
+                        <img id="pageImg" src="./HinhAnh/14579499249632_ga-goc-tu-2-s-500x500.jpg">
+                    </div>
+                            <div class="columntype4">
+                                <div>
+                                    <p id="tenSanPham" class="font1"></p>
+                                    <p>Dòng sản phẩm: <span id="dongSanPham"></span><span id="hangTon" class="hangton">Vẫn còn hàng</span></p>
+                                    <p id="giaSanPham" class="font2"></p>
+                                    <p>Giá chưa VAT: <span id="giaVAT">0</span> VND</p>
+                                    <p><br><span style="font-size: 25px; color: red">
+                                            <b>CÔNG TY TNHH CHĂN NUÔI LONG BÌNH</b></span></p>
+                                    <p>Nhà cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ sinh <br>
+                                        Liên hệ với chúng tôi để có giá tốt nhất.<br>
+                                        _ Phone: 0919166228</p>
+                                    <p>_ Email : hoangphuc@longbinhfood.vn</p>
+                                    <p>_ Mua Gà Tươi tại các cửa hàng khu vực Hồ Chí Minh</p>
+                                    <p><b>1. Cửa hàng KDSP Gia Cầm Gà Hải Đăng</b></p>
+                                    <p><b>Phone 1:</b> 0919.188.228 (Mr.Thịnh)</p>
+                                    <p><b>Phone 2:</b> 0917.200.228 (Mr.Bồi)</p>
+                                    <p><b>Địa Chỉ:</b> Số 322, Đường Liên Tỉnh 5 , P.6, Q.8</p>
+                                    <p><b>2. Cửa hàng Long Bình Quận 1</b></p>
+                                    <p><b>Phone:</b> 0919.160.228 (Mr. Hưng)</p>
+                                    <p><b>Địa Chỉ:</b> Số 5, Nguyễn Thái Học, P.Cầu Ông Lãnh, Quận 1</p>
+                                    <p><b>3. Cửa hàng Long Bình Chợ Bình Điền</b></p>
+                                    <p><b>Phone:</b> 0915.610.228 (Mr. Phú)</p>
+                                    <p><b>Địa Chỉ:</b> Sạp Phú Sơn, H1042 Lô H1, Chợ Đầu Mối Bình Điền</p>
+                                    <p><b>4. Cửa hàng Long Bình Quận Tân Phú</b></p>
+                                    <p><b>Phone:</b> 0919.600.228 (Mr. Tấn)</p>
+                                    <p><b>Địa Chỉ:</b> Số 270, Nguyễn Sơn, P.Phú Thọ Hoà, Quận Tân Phú</p>
+                                    <p><b>5. Văn Phòng Đại Diện Công Ty Long Bình (Chi Nhánh 1)</b></p>
+                                    <p><b>Phone:</b> 0916.610.228 (Mr. Phúc)</p>
+                                    <p><b>Địa Chỉ:</b> Số 438, Võ Văn Kiệt, P. Cô Giang, Quận 1</p>
+                                    <p><b>6. Cửa hàng KDSP Gia Cầm Gà Hải Đăng (Bán Lẻ)</b></p>
+                                    <p><b>Phone:</b> 0943.610.228 (Mrs. Hiền)</p>
+                                    <p><b>Địa Chỉ:</b> Số 322, Đường Liên Tỉnh 5 , P.6, Q.8</p>
+                                    <p><b>7. Cửa Hàng Gà Việt</b></p>
+                                    <p><b>Phone:</b> 0919.166.228 (Mr. Sinh)</p>
+                                    <p><b>Địa Chỉ:</b> Số 53 Đỗ Quang Đẩu, P.Phạm Ngũ Lão, Quận 1</p>
+                                    <p><b>8. Cửa Hàng Long Bình (Quận 6)</b></p>
+                                    <p><b>Phone:</b> 0916.660.228 (Mr. Hạ)</p>
+                                    <p><b>Địa Chỉ:</b> Số 35B, Tân Hoà Đông, Phường 14, Quận 6, TP. Hồ Chí Minh<br><br></p>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+<!-- cho nay -->
+        
+        <div id="thongbaonhanvien" style="margin-top: 50px; display: none;">
+            <br><br><br>
+            <span style="font-size: 20px; color: red;">Thông Báo</span><br>
+            <span id="noidungthongbao">Không có thông báo mới</span>
+        </div>
+        <div class="slideshow-container">
+            <div class="fade slide" style="display: block;">
+                <img src="banner-1.jpg">
+            </div>
+            <div class="fade slide">
+                <img src="banner-sinh-nhat-thu-10.jpg">
+            </div>
+            <div class="fade slide">
+                <img src="banner-phu-lam-ga-tuoi-long-binh.jpg">
+            </div>
+            <div class="fade slide">
+                <img src="banner-3.jpg">
+            </div>
+            <div class="fade slide">
+                <img src="nam-moi-2017-banner.jpg">
+            </div>
+
+            <a class="prevbtn" onclick="plusslide(-1)">&#10094;</a>
+            <a class="nextbtn" onclick="plusslide(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <div style="text-align: center;">
+            <span class="dot active" onclick="currentslide(1)"></span>
+            <span class="dot" onclick="currentslide(2)"></span>
+            <span class="dot" onclick="currentslide(3)"></span>
+            <span class="dot" onclick="currentslide(4)"></span>
+            <span class="dot" onclick="currentslide(5)"></span>
+
+        </div>
+        
+        <div class="flex-container" id="dssp111">
+             
+        </div>
+    <!-- New ( -->
+    <div class="row">
+        <div class="columntype4">
+            <p class="font6 red">ĐÙI TỎI</p>
+            <p class="font5">Tỏi gà chứa nhiều chất dưỡng chất có lợi cho sức khoẻ. Đồng thời, loại thịt này còn có
+                thể chế biến thành rất nhiều món ăn ngon như: hấp, la-gu, rô-ti, cà-ri...Nếu chỉ thích ăn cánh hoặc
+                chân gà, bạn hãy đập bộ phận này cho hơi giập, ướp với sa tế, hạt nêm, sau đó nướng than. Dùng với
+                rau răm và muối tiêu quất, mùi vị rất thơm. Ngoài ra, bạn còn có thể xé nhỏ thịt gà, trộn với bắp
+                cải nhuyễn làm gỏi...Theo các nhà dinh dưỡng học, ngoài những chất albumin, chất béo, thịt gà còn
+                có các vitamin A, B1, B2, C, E, axit, canxi, photpho, sắt. Đây là loại thực phẩm chất lượng cao, cơ
+                thể con người dễ hấp thu và tiêu hoá.Theo Đông Y, thịt gà có tính ôn ngọt, không độc, bổ dưỡng,
+                lành mạnh phổi. Loại thịt này còn chữa băng huyết, xích bạch đới, lỵ, ung nhọt, là loại thực phẩm
+                bổ âm cho tỳ vị, bổ khí, huyết và thận.</p>
+            <a href="../San pham/Dui_toi.html" class="xemsp">Xem</a>
+                
+        </div>
+        <div class="columntype4">
+            <img src="../HinhAnh/occasion_img_04.png" alt="anh" width="auto" height="auto">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columntype4">
+            <img src="../HinhAnh/occasion_img_011.png" alt="anh">
+
+        </div>
+        <div class="columntype4">
+            <p class="font6 red">GÀ NGUYÊN CON</p>
+            <p class="font5">
+                Gà nguyên con thịt dai và thơm ngon, phù hợp để làm các món gà như gà quay, gà luộc, gà không lối thoát...
+            </p>
+            <a href="../San pham/Ga_nguyen_con.html" class="xemsp">Xem</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columntype4">
+            <p class="font6 red">MÔNG GÀ</p>
+            <p class="font5">Phao câu gà(mông gà) thơm ngon, phù hợp để làm các món gà như nướng... có tác dụng làm đẹp da</p>
+            <a href="../San pham/Mong.html" class="xemsp">Xem</a>
+                
+        </div>
+        <div class="columntype4">
+            <img src="../HinhAnh/occasion_img_04.png" alt="anh" width="auto" height="auto">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="columntype4">
+            <img src="../HinhAnh/occasion_img_07.png" alt="anh">
+
+        </div>
+        <div class="columntype4">
+            <p class="font6 red">ĐÙI GÀ GÓC TƯ</p>
+            <p class="font5">
+                Đùi gà , tỏi gà ,Thịt gà chứa nhiều chất dưỡng chất có lợi cho sức khoẻ. Đồng thời, loại thịt này còn có thể chế biến thành rất nhiều món ăn ngon như: hấp, la-gu, rô-ti, cà-ri...Nếu chỉ thích ăn cánh hoặc chân gà, bạn hãy đập bộ phận này cho hơi giập, ướp với sa tế, hạt nêm, sau đó nướng than. Dùng với rau răm và muối tiêu quất, mùi vị rất thơm. Ngoài ra, bạn còn có thể xé nhỏ thịt gà, trộn với bắp cải nhuyễn làm gỏi...Theo các nhà dinh dưỡng học, ngoài những chất albumin, chất béo, thịt gà còn có các vitamin A, B1, B2, C, E, axit, canxi, photpho, sắt. Đây là loại thực phẩm chất lượng cao, cơ thể con người dễ hấp thu và tiêu hoá.Theo Đông Y, thịt gà có tính ôn ngọt, không độc, bổ dưỡng, lành mạnh phổi. Loại thịt này còn chữa băng huyết, xích bạch đới, lỵ, ung nhọt, là loại thực phẩm bổ âm cho tỳ vị, bổ khí, huyết và thận.
+                Đặc biệt, thịt gà có tác dụng bồi bổ cao cho người bị bệnh lâu ngày, dạ dày bị phong hàn, suy yếu không hấp thu được thức ăn. Ngoài bổ khí huyết, thịt gà còn giúp trừ phong.Bạn có thể hầm gà với các vị thuốc như: táo tàu, kỷ tử, hải sâm, nhãn nhục, hoài sơn... hoặc nhồi cam thảo và ngải cứu vào gà ác.Đây là loại thịt ngon, bổ dưỡng, nhưng không phải ai cũng biết rõ công dụng của nó đối với sức khoẻ.Thịt gà tốt cho não bộ, làm giảm stress
+                Hàm lượng protein và phức hợp của amino axit trong thịt gà có ảnh hưởng tích cực đến não bộ, làm phấn chấn tinh thần, giảm sự lo lắng, stress cũng như có tác dụng cải thiện huyết áp và nhịp tim.Tuỳ theo sở thích, bạn có thể chế biến thịt gà theo bất cứ công thức nào. Bạn cũng có thể hết hợp gà với nhiều nguyên liệu khác. Tuy nhiên, theo dân gian, thịt gà kỵ với rau kinh giới nên bạn cẩn thận khi kết hợp.
+            </p>
+            <a href="../San pham/Ga_goc_tu.html" class="xemsp">Xem</a>
+        </div>
+    </div>
+
+    <!-- New ) -->
+    </section>
+    <!-- New ) -->
+    <footer>
+        <div class="row">
+            <div class="columntype1">
+                <img src="lbf.png" alt="Longbinhfood" width="150" height="100">
+                <p>Hiện tại và tương lai chúng tôi cố gắng cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ sinh trên
+                    toàn quốc. - </p>
+                <b>Nguyen Thanh Phi Long (CEO)</b>
+            </div>
+            <div class="columntype2">
+                <p>THÔNG TIN</p>
+                <a href="../Gioi thieu/Gioi_thieu.html">Thông tin chúng tôi</a>
+                <br>
+                <a href="../thongtin/Thong_tin_giao_hang.html">Thông tin giao hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="../thongtin/Bao_mat.html">Chính sách bảo mật thông tin khách hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="../thongtin/Dieu_khoan_dieu_kien.html">Điều khoản và điều kiện</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>QUẢN LÝ TÀI KHOẢN</p>
+                <a href="../Lien he/Lien_he.html">Liên hệ</a>
+                <br>
+                <! -- chua -->
+                <a href="http://longbinhfood.vn/return">Đổi hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="http://longbinhfood.vn/sitemap">Sơ đồ trang</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>CHĂM SÓC KHÁCH HÀNG</p>
+                <a href="http://longbinhfood.vn/brand">Thương hiệu</a>
+                <br>
+                <! -- chua -->
+                <a href="http://longbinhfood.vn/voucher">Phiếu quà tặng</a>
+                <br>
+                <! -- chua -->
+                <a href="http://longbinhfood.vn/affiliate">Cộng tác bán hàng</a>
+                <br>
+                <! -- chua -->
+
+            </div>
+            <div class="columntype3">
+                <p>THÔNG TIN CÔNG TY</p>
+                <p>53 Đõ Quang Đẩu, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM</p>
+                <p>097.9188.288</p>
+                <p>longbinhfood@gmail.com</p>
+                <p>MST: 0304457623</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

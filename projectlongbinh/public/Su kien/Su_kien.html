@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <script src="../nav_script_1.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar" class="navbar">
+
+            <!-- Home -->
+            <a href="../" style="padding: 15px 10px 5px 20px">
+                <img src="../lbf.png" alt="Longbinhfood" width="150" height="50">
+            </a>
+            <!-- Gioi thieu -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="../Gioi thieu/Gioi_thieu.html">Giới thiệu</a>
+                </button>
+            </div>
+            <!-- San pham -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a>Sản phẩm</a>
+                    <! -- chua -->
+                </button>
+                <div class="dropdown-content">
+                    <a href="../San pham/Ga_tuoi.html">Gà tươi</a>
+                    <a href="../San pham/Ga_nguyen_con.html">Gà nguyên con</a>
+                    <a href="../San pham/Ga_ran.html">Gà rán</a>
+                </div>
+            </div>
+            <!-- Tin tuc -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a>Tin tức</a>
+                    <! -- chua -->
+                </button>
+                <div class="dropdown-content">
+                    <a href="../Khuyen mai/Khuyen_mai.html">Khuyến mãi</a>
+                    <a href="../Su kien/Su_kien.html">Sự kiện</a>
+                    <a href="../Bep lb/Bep_lb.html">Bếp Long Bình</a>
+                </div>
+            </div>
+            <!-- He thong -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a>Hệ thống</a>
+                </button>
+                <div class="dropdown-content">
+                    <div class="sub-dropdown">
+                        <button class="dropbtn">
+                            <a>Hệ Thống Chăn Nuôi</a>
+                        </button>
+                        <div class="sub-content">
+                            <a href="#">Trại giống</a>
+                            <a href="#">Nhà máy áp</a>
+                            <a href="#">Trại nuôi gà thịt</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="sub-dropdown">
+                        <button class="dropbtn">
+                            <a>Hệ Thống Sản Xuất</a>
+                        </button>
+                        <div class="sub-content">
+                            <a href="#">Trại giống</a>
+                            <a href="#">Nhà máy áp</a>
+                            <a href="#">Trại nuôi gà thịt</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="sub-dropdown">
+                        <button class="dropbtn">
+                            <a>Hệ Thống Phân Phối Sản Phẩm</a>
+                        </button>
+                        <div class="sub-content">
+                            <a href="#">Trại giống</a>
+                            <a href="#">Nhà máy áp</a>
+                            <a href="#">Trại nuôi gà thịt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lien he -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="../Lien he/Lien_he.html">Liên hệ</a>
+                </button>
+            </div>
+            <!-- Tai khoan -->
+            <div class="dropdown right" style="padding-right: 10%"></div>
+            <div id="dadangnhap" class="dropdown right" style="display: none">
+                <button class="dropbtn" style="padding: 10px 20px 10px 0px">
+                    <img src="../3 cham.png" alt="3 cham" width="30" height="30">
+                </button>
+                <div class="dropdown-content rdrop">
+                    <a href="../Tai khoan/Thong_tin_tai_khoan.html">Thông tin tài khoản</a>
+                    <a href="../Tai khoan/Cap_nhat_tai_khoan.html">Cập nhật tài khoản</a>
+                    <a href="../Tai khoan/Xem_lich_su_giao_dich.html">Xem lịch sử giao dịch</a>
+                    <a href="../Tai khoan/Xac_nhan_don_hang.html">Xác nhận đơn hàng</a>
+                    <a href="" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+            <!-- Dang nhap -->
+            <div id="chuadangnhap" class="dropdown right">
+                <button class="dropbtn" style="padding: 10px 20px 10px 0px">
+                    <img src="../3 cham.png" alt="3 cham" width="30" height="30">
+                </button>
+                <div class="dropdown-content rdrop">
+                    <p> Tên đăng nhập:</p>
+                    <input id="tendn" type="text" name="id" value="id">
+                    <p> Mật khẩu:</p>
+                    <input id="matkhau" type="text" name="pass" value="pass">
+                    <br>
+                    <a href="#quenmatkhau" style="font-size: 15px; padding-left: 0">Quên mật khẩu?</a>
+                    <! -- chua -->
+                    <button onclick="login()">Đăng nhập</button>
+                    <button>
+                        <a href="../Tai khoan/Dang_ky.html">Đăng ký</a>
+                    </button>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Gio hang -->
+            <div class="dropdown right">
+                <button class="dropbtn" style="padding: 0">
+                    <img src="../giohang.png" alt="Giỏ hàng" width="50" height="50">
+                </button>
+                <div class="dropdown-content rdrop" style="width: 300px; min-height: 150px">
+                    <a href="#giohang" style="font-size: 15px; padding-bottom: 0">XEM GIỎ HÀNG</a>
+                    <! -- chua -->
+                    <p>______________________________________</p>
+                    <p>Giỏ hàng đang trống</p>
+                </div>
+            </div>
+            <!-- Tim kiem -->
+            <div class="search right">
+                <input type="text" name="Tim kiem" placeholder="Tìm kiếm..">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../trang_chinh_1.html">Trang chính</a>
+            </li>
+            <li>Sự kiện</li>
+        </ul>
+    </nav>
+
+    <section>
+        <div id="tab1" class="tabcontent" style="display: block">
+            <div class="flex-container" style="padding-left: 5%">
+                <div class="item">
+                    <a href="#lbf1">
+                        <img src="lbf.png" alt="Longbinhfood" width="auto" height="auto">
+                    </a>
+                    <! -- chua -->
+                    <div>
+                        <a href="lbf1">
+                            <h4>
+                                <b>TÊN SỰ KIỆN</b>
+                            </h4>
+                        </a>
+                        <! -- chua -->
+                        <p>intro</p>
+                        <p class="event-date">Ngày đăng</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#lbf2">
+                        <img src="lbf.png" alt="Longbinhfood" width="auto" height="auto">
+                    </a>
+                    <! -- chua -->
+                    <div>
+                        <a href="lbf2">
+                            <h4>
+                                <b>TÊN SỰ KIỆN</b>
+                            </h4>
+                        </a>
+                        <! -- chua -->
+                        <p>intro</p>
+                        <p class="event-date">Ngày đăng</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#lbf3">
+                        <img src="lbf.png" alt="Longbinhfood" width="auto" height="auto">
+                    </a>
+                    <! -- chua -->
+                    <div>
+                        <a href="lbf3">
+                            <h4>
+                                <b>TÊN SỰ KIỆN</b>
+                            </h4>
+                        </a>
+                        <! -- chua -->
+                        <p>intro</p>
+                        <p class="event-date">Ngày đăng</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#lbf4">
+                        <img src="lbf.png" alt="Longbinhfood" width="auto" height="auto">
+                    </a>
+                    <! -- chua -->
+                    <div>
+                        <a href="lbf4">
+                            <h4>
+                                <b>TÊN SỰ KIỆN</b>
+                            </h4>
+                        </a>
+                        <! -- chua -->
+                        <p>intro</p>
+                        <p class="event-date">Ngày đăng</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#lbf5">
+                        <img src="lbf.png" alt="Longbinhfood" width="auto" height="auto">
+                    </a>
+                    <! -- chua -->
+                    <div>
+                        <a href="lbf5">
+                            <h4>
+                                <b>TÊN SỰ KIỆN</b>
+                            </h4>
+                        </a>
+                        <! -- chua -->
+                        <p>intro</p>
+                        <p class="event-date">Ngày đăng</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#lbf6">
+                        <img src="lbf.png" alt="Longbinhfood" width="auto" height="auto">
+                    </a>
+                    <! -- chua -->
+                    <div>
+                        <a href="lbf6">
+                            <h4>
+                                <b>TÊN SỰ KIỆN</b>
+                            </h4>
+                        </a>
+                        <! -- chua -->
+                        <p>intro</p>
+                        <p class="event-date">Ngày đăng</p>
+                    </div>
+                </div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+            </div>
+        </div>
+
+        <div id="tab2" class="tabcontent">
+            <h3>2</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="tab3" class="tabcontent">
+            <h3>3</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="tab4" class="tabcontent">
+            <h3>4</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="tab5" class="tabcontent">
+            <h3>5</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div class="tab">
+            <button class="tablinks" onclick="prevTab()">&laquo</button>
+            <button class="tablinks active" onclick="changeTab(event, 'tab1')">1</button>
+            <button class="tablinks" onclick="changeTab(event, 'tab2')">2</button>
+            <button class="tablinks" onclick="changeTab(event, 'tab3')">3</button>
+            <button class="tablinks" onclick="changeTab(event, 'tab4')">4</button>
+            <button class="tablinks" onclick="changeTab(event, 'tab5')">5</button>
+            <button class="tablinks" onclick="nextTab()">&raquo</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="columntype1">
+                <img src="lbf.png" alt="Longbinhfood" width="150" height="100">
+                <p>Hiện tại và tương lai chúng tôi cố gắng cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ sinh trên
+                    toàn quốc. - </p>
+                <b>Nguyen Thanh Phi Long (CEO)</b>
+            </div>
+            <div class="columntype2">
+                <p>THÔNG TIN</p>
+                <a href="#">Thông tin chúng tôi</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Thông tin giao hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Chính sách bảo mật thông tin khách hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Điều khoản và điều kiện</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>QUẢN LÝ TÀI KHOẢN</p>
+                <a href="#">Liên hệ</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Đổi hàng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Sơ đồ trang</a>
+                <br>
+                <! -- chua -->
+            </div>
+            <div class="columntype2">
+                <p>CHĂM SÓC KHÁCH HÀNG</p>
+                <a href="#">Thương hiệu</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Phiếu quà tặng</a>
+                <br>
+                <! -- chua -->
+                <a href="#">Cộng tác bán hàng</a>
+                <br>
+                <! -- chua -->
+
+            </div>
+            <div class="columntype3">
+                <p>THÔNG TIN CÔNG TY</p>
+                <p>53 Đõ Quang Đẩu, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM</p>
+                <p>097.9188.288</p>
+                <p>longbinhfood@gmail.com</p>
+                <p>MST: 0304457623</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

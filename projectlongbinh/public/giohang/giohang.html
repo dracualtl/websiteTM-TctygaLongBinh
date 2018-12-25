@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" type="text/css" href="../navigation.css">
+        <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+        <link rel="stylesheet" type="text/css" href="../page.css">
+        <link rel="stylesheet" type="text/css" href="../giohang/giohang.css">
+        <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+        <meta charset="uft-8">
+        <script src="../jquery.js"></script>
+        <script src="../test.js"></script>
+        <script src="giohang.js"></script>
+        
+</head>
+
+<body onload="build1()";  >
+    <header id="header1" >
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../">Trang chính</a>
+            </li>
+            <li>Giỏ hàng</li>
+        </ul>
+    </nav>
+    <div id="xacnhanmua" >
+        <div class="modal-content">
+            <span onclick="document.getElementById('xacnhanmua').style.display='none';" class="close">&nbsp&times;&nbsp</span>
+            <b>&nbsp</b>
+            <p style="font-size: 25px;"> <br>Kho <span id="tenkho">abc</span> hiện tại chỉ còn <span id="slkho">123</span></p>
+            <p> Chọn số 1: Mua số lượng còn lại của kho hiện tại. </p>
+            <p> Chọn số 2: Giữ số lượng cũ, đợi chuyển từ kho khác về.</p><br><br>
+            <b class="sttxoa" style="display: none;"></b>
+            <b class="stylexoa" style="display: none;"></b>
+            <a onclick="mualuon(1)" style="background-color: red; margin-left: 30%">1</a>
+            <a onclick="mualuon(2)" style="background-color: red;">2</a>
+            <a onclick="document.getElementById('xacnhanmua').style.display='none';" style="background-color: red">No</a>
+            <p></p>
+        </div>
+    </div>
+    <!-- Show danh sach san pham trong gio hang -->
+        <div id="thongtinmacdinh" style="display:block;">
+                <b style="font-size: 20px; text-align: center; margin-left: 70px;">Giỏ hàng trống hoặc bạn chưa đăng nhập</b><br>
+                <input type="button" id="btnExit" value="Về Trang Chủ">
+        </div>
+        <div id="dssanpham11">
+                <p class="tieudedanhsach">Danh sách sản phẩm trong giỏ hàng</p>
+        </div>
+
+        <div id="dssanpham22">
+                <p class="tieudedanhsach">Thanh toán</p>
+                <form>
+                        <b style="font-size: 20px; padding-left: 5%">Mời bạn chọn hình thức thanh toán?</b>
+                            <input type="radio" name="colors" id="tt" checked><b style="font-size: 20px;" >Trực tiếp</b>
+                            <input type="radio" name="colors" id="nh"><b style="font-size: 20px;" >Ngân hàng</b>
+                        <input type="button" onclick="kiemtraradio()" value="Đổi">
+                </form>
+                <div id="tttt">
+                        <br><br><b style="font-size: 20px;  padding-left: 5%;">Mời Bạn Chọn Khu Vực :  </b>
+                        <select id="mySelect2" onmouseout="chonkv1();">
+                                <option>Miền Nam</option>
+                                <option>Miền Trung</option>
+                                <option>Miền Bắc</option>
+                        </select><br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Địa chỉ chi tiết (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtdc" placeholder="Nhập Địa chỉ nhận hàng của bạn" style="margin-left: 52px">
+                        <br><br>
+                        <input type="checkbox" name="cbldl" onmousemove="choncb1()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;"/><b style="font-size: 15px;">Lấy địa chỉ trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Số điện thoại liên hệ (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtsdt" placeholder="Nhập SDT nhận hàng của bạn" style="margin-left: 2px">
+                        <br><br>
+                        <input type="checkbox" name="cbldl" onmousemove="choncb1()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;" /><b style="font-size: 15px;">Lấy số điện thoại trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Ghi Chú :  </b>
+                        <input type="text" id="txtgc" placeholder="Nhập ghi chú nếu có" style="margin-left: 132px;">
+                        <br><br><br><br>
+                </div>
+                <div class="hovergallery">
+                        <img id="imagesp2" src="../images/image.jpg" alt="anh" width="500px" height="500px" style="margin-left: 300px; margin-bottom: 500px; position: absolute; background-color: black">
+                </div>
+                <div id="ttnh" style="display: none;">
+                        <p style="font-size: 15px; padding-left: 5%">Bạn chọn ngân hàng bạn đang dùng để chuyển khoản ứng với ngân hàng của nhân viên trong danh sách bên dưới:</p>
+                        <select id="mySelect1" style="font-size: 30px; margin-left: 5%;" onmouseout="chonnh();">
+                                <option>Agribank</option>
+                                <option>Sacombank</option>
+                                <option>Vietcombank</option>
+                                <option>Vietinbank</option>
+                        </select><br><br>
+                        <div id="agri">
+                        <b style="font-size: 20px; padding-left: 8%">NV. Nguyễn Văn Tèo  STK: 07007891234</b><br>
+                        <b style="font-size: 20px; padding-left: 8%">NV. Trần Văn Tũn  STK: 07007832444</b><br>
+                        </div>
+                        <div id="sac" style="display: none;">
+                            <b style="font-size: 20px; padding-left: 8%">NV. Lê Lung Linh  STK: 904359939053</b><br>
+                            <b style="font-size: 20px; padding-left: 8%">NV. Trần Trọc  STK: 904359939053</b><br>
+                        </div>
+                        <div id="vietc" style="display: none;">
+                            <b style="font-size: 20px; padding-left: 8%">NV. Trần Không Tên  STK: 438783875385873</b><br>
+                            <b style="font-size: 20px; padding-left: 8%">NV. Nguyễn Bá Đạo  STK: 438783875385874</b><br>
+                        </div>
+                        <div id="viett" style="display: none;">
+                            <b style="font-size: 20px; padding-left: 8%">NV. Dương Hóa  STK: 3284728482489</b><br>
+                            <b style="font-size: 20px; padding-left: 8%">NV. Cô Long  STK: 3284728482488</b><br>
+                        </div>
+                        <br><br><b style="font-size: 20px;  padding-left: 5%;">Mời Bạn Chọn Khu Vực :  </b>
+                        <select id="mySelect3" onmouseout="chonkv2();">
+                                <option>Miền Nam</option>
+                                <option>Miền Trung</option>
+                                <option>Miền Bắc</option>
+                        </select><br><br>
+                        
+                        <form action="http://localhost:3000/upload1" method="Post" enctype="multipart/form-data">
+                            <b style="font-size: 20px;  padding-left: 5%;">File chuyển khoản (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                            <input style="margin-left: 37%;" type="file" name="file1" id="file1" accept="image/*" onchange="previewFile2();">
+                            <input type="submit" value="xem ảnh" id="btnanh1" style="display: none;" >
+                        </form>
+                        
+                        <!-- <input type="text" id="txtmack" placeholder="Nhập Mã giao dịch chuyển khoản" style="margin-left: 25px;"> -->
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Địa chỉ chi tiết (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtdc1" placeholder="Nhập Địa chỉ nhận hàng của bạn" style="margin-left: 53px;">
+                        <br><br>
+                        <input type="checkbox" name="cbldl1" onmousemove="choncb2()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;"/><b style="font-size: 15px;">Lấy địa chỉ trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Số điện thoại liên hệ (<b style="font-size: 25px; color: red">*</b>) :  </b>
+                        <input type="text" id="txtsdt1" placeholder="Nhập SDT nhận hàng của bạn" style="margin-left: 2px;">
+                        <br><br>
+                        <input type="checkbox" name="cbldl1" onmousemove="choncb2()"  style="margin-left: 260px; height: 20px;
+                        width: 20px;"/><b style="font-size: 15px;">Lấy địa chỉ trong thông tin</b>
+                        <br><br>
+                        <b style="font-size: 20px;  padding-left: 5%;">Ghi Chú :  </b>
+                        <input type="text" id="txtgc1" placeholder="Nhập ghi chú nếu có" style="margin-left: 132px;">
+                        <br><br><br><br>
+                </div>
+        </div>
+        
+        <div id="nutthanhtoan" style="display: none;">
+            <b style="font-size: 25px; margin-left: 37%; margin-bottom: 10%;">Tổng Tiền Sản Phẩm: </b><b class="tongtien" style="font-size: 30px; "> 0</b><b style="font-size: 25px">  VND</b><br>
+            <b style="font-size: 25px; margin-left: 37%; margin-bottom: 10%;">Phí Ship: </b><b class="phiship" style="font-size: 30px; "> 15000</b><b style="font-size: 25px">  VND</b><br>
+            <b style="font-size: 25px; margin-left: 37%; margin-bottom: 10%;">Tổng Cộng: </b><b class="tongcong" style="font-size: 30px; "> 0</b><b style="font-size: 25px">  VND</b><br>
+            <input type="button" id="btnPay" value="Thanh Toán">
+        </div>
+        
+        <footer id="ft1">
+            
+        </footer>
+</body>
+
+</html>

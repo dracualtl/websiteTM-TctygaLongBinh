@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../TinTuc/Tin_tuc.css">
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Sự kiện - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="../TinTuc/Tin_tuc.js"></script>
+    <script src="../test.js"></script>
+</head>
+
+<body onload="build4(); showSuKien();">
+    <header id="header1">
+        
+    </header>
+    
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../Trang_chinh_1.html">Trang chính</a>
+            </li>
+            <li>Tin tức - Sự kiện Long Bình</li>
+        </ul>
+    </nav>
+
+    <section>
+        
+        <div id="md">
+            <div class="modal-content" style="width: 85%; margin-top: -10px">
+                <span onclick="hideTinTuc()" class="close" style="right: 9%">&times;</span>
+                
+                <div id="addTtuc" style="padding: 0 20px 30px">
+                    <p id="nhanDangLoaiTT" class="font4" style="font-size: 40px; width: 100%;">THÊM SỰ KIỆN</p>
+                    <p>Tiêu đề:</p>
+                    <input id="tde" type="text">
+                    <div>
+                        <img id="hanh" src="../HinhAnh/addFood.png" alt="ANH">
+                        <p>Hình ảnh (chọn tệp): </p>
+                    </div>
+                    <p>Giới thiệu:</p>
+                    <textarea id="gthieu" name="" id="" cols="30" rows="10"></textarea>
+                    <p style="width: 100%">Nội dung:</p>
+                    <textarea name="" id="ndung" cols="30" rows="10" style="width: 98%"></textarea>
+                    <p id="thongbao"></p>
+                    <p style="text-align: center; width: 100%">
+                        <button id="IconBtn1" title="0" onclick="moreHeight()">
+                            <img src="../HinhAnh/Double Down Icon.png" width="20px" height="20px">
+                        </button>
+                        <button onclick="addTinTuc()">Thêm</button>
+                        <button onclick="hideTinTuc()">Thoát</button>
+                        
+                    </p>
+                    <br><br>
+                </div>
+                
+                <!-- Bep an long binh -->
+                
+                <!-- <div class="tintuc">
+                    <p class="font3">MỪNG NGÀY QUỐC KHÁNH 2/9</p>
+                    <img src="../HinhAnh/le-2-9-ga-tuoi-long-binh.png" alt="anh 1">
+                    <p class="font5">Công Ty TNHH Chăn Nuôi Long Bình gửi lời chúc tới tất cả khách hàng ngày lễ quốc
+                        khánh 2/9 nhiều niềm vui và thành công.</p>
+                    <p class="font5" style="text-align: right"><i>Long Bình, 01,09,2016</i></p>
+                </div>
+
+                <div class="tintuc">
+                    <p class="font3">KHAI TRƯƠNG CỬA HÀNG PHÚ LÂM QUẬN 6</p>
+                    <img src="../HinhAnh/bai-viet-khai-truong-phu-lam-long-binh.png" alt="anh 1" style="width: 100%">
+                    <p class="font5">Khai trương......Khuyến Mãi......Khuyến Mãi........!<br>
+
+                        Ngày 23/08/2016 Công Ty TNHH Chăn Nuôi Long Bình khai trương cửa hàng bán gà tươi tại: 35B Tân
+                        Hòa Đông, P 14 Quận 6 TP Hồ Chí Minh( Cổng Chợ Phú Lâm).<br>
+                        Công Ty có áp dụng chương trình khuyến mãi cho khách hàng, quý khách hãy nhanh tay đến và mang
+                        về những sản phẩm thịt gà tuơi ngon nhất cho gia đình mình.<br>
+                        Mọi thông tin về sản phẩm và chương trình khuyến mãi của Long Bình khu vực Quận 6 vui lòng liên
+                        hệ:<br>
+                        Hotline: 0916.660.228( Mr. Hạ)</p>
+                    <p class="font5" style="text-align: right"><i>Long Bình, 25,08,2016</i></p>
+                </div>
+
+                <div class="tintuc">
+                    <p class="font3">GÀ RÁN LONG BÌNH CỨ ĂN ĐI KHÔNG LO VỀ GIÁ</p>
+                    <img src="../HinhAnh/banner-ga-ran-2.jpg" alt="anh 1" style="width: 100%">
+                    <p class="font5">Gà rán Long Bình được làm từ gà chọn lọc tươi ngon nhất. có 4 loại combo cho khách
+                        hàng lựa chọn :</p>
+                    <table class="font5" style="width: 100%; text-align: left; border: 1px ridge silver; font-size: 16px">
+                        <tr>
+                            <td>1 miếng gà giòn</td>
+                            <td>28.000 vnd (combo A)</td>
+                        </tr>
+                        <tr>
+                            <td>1 khoai tây chiên</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tặng 1 nước ngọt</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                        </tr>
+                        <tr>
+                            <td>2 miếng gà giòn</td>
+                            <td>48.000 vnd (combo B)</td>
+                        </tr>
+                        <tr>
+                            <td>1 khoai tây chiên</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tặng 1 nước ngọt</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                        </tr>
+                        <tr>
+                            <td>3 miếng gà giòn</td>
+                            <td>67.000 vnd (combo C)</td>
+                        </tr>
+                        <tr>
+                            <td>1 khoai tây chiên</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tặng 1 nước ngọt</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp</td>
+                            <td>&nbsp</td>
+                        </tr>
+                        <tr>
+                            <td>4 miếng gà giòn</td>
+                            <td>85.000 vnd (combo D)</td>
+                        </tr>
+                        <tr>
+                            <td>Tặng 2 nước ngọt</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <p class="font5"><b>Địa chỉ Gà Rán Long Bình Foods:</b> 438 võ văn kiệt, Phường Cô Giang, Quận 1 ,
+                        TP.HCM<br>
+                        <b>Hotline:</b> 0919.118.288<br>
+                        <b>Facebook:</b> Gà Tươi Long Bình</p>
+                    <img src="../HinhAnh/ga-ran-long-binh-food-1.jpg" alt="anh" style="width: 100%">
+                    <img src="../HinhAnh/ga-ran-long-binh-food-6.jpg" alt="anh" style="width: 100%">
+                    <img src="../HinhAnh/ga-ran-long-binh-food-3.jpg" alt="anh" style="width: 100%">
+                    <img src="../HinhAnh/ga-ran-long-binh-food-4.jpg" alt="anh" style="width: 100%">
+                    <img src="../HinhAnh/ga-ran-long-binh-food-5.jpg" alt="anh" style="width: 100%">
+                    <img src="../HinhAnh/ga-ran-long-binh-food-8.jpg" alt="anh" style="width: 100%">
+                    <img src="../HinhAnh/ga-ran-long-binh-food-9.jpg" alt="anh" style="width: 100%">
+                    <p class="font5" style="text-align: right"><i>Long Bình, 22,06,2016</i></p>
+                </div>
+
+                <div class="tintuc">
+                    <p class="font3">KHAI TRƯƠNG GÀ RÁN TẠI CHI NHÁNH SỐ 438 VÕ VĂN KIỆT, F.CÔ GIANG ,QUẬN 1</p>
+                    <p class="font5">Tiện Lợi Hơn - Nhanh Chóng Hơn - An Toàn Hơn - Ngon Miệng Hơn.( Take Away)<br>
+                        Gà Rán Của Người Việt Nam - Cho Tất Cả Mọi Người.<br>
+                        Nhân Dịp Khai Trương Ngày 29/04/2016 và Chương Trình Lễ 30/04, 01/05.<br>
+                        "Gà Rán Long Bình, Thơm Ngon Mỗi Ngày" có nhiều ưu đãi về giá cho khách hàng.<br>
+                        Xin mời mọi người đến dùng thử và trải nghiệm sản phẩm của Long Bình với giá cả hợp lý nhất.<br>
+                        Mọi thông tin về sản phẩm và dịch vụ quý khách hàng vui lòng liên hệ Hotline: 0919.118.288<br>
+                        Hoặc SĐT: 0916.610.228<br>
+                        Tại Công Ty TNHH Chăn Nuôi Long Bình.<br>
+                        Số 438 Võ Văn Kiệt,F Cô Giang ,Quận 1( góc Trần Đình Xu).</p>
+                    <img src="../HinhAnh/ga-ran-longbinhfood.jpg" alt="anh">
+                    <p class="font5" style="text-align: right"><i>Long Bình, 29,04,2016</i></p>
+                </div> -->
+                
+                <div class="tintuc">
+                    <p class="font3" id="ntde"></p>
+                    <img id="nhanh" src="../HinhAnh/" alt="anh 1" width="auto" height="auto">
+                    <pre id="nndung" class="font5"></pre>
+                    <p id="ntgian" class="font5" style="text-align: right"><i></i></p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="formXoa">
+            <div class="modal-content" style="width: 35%; height: fit-content"> 
+                <p>Bạn muốn xóa sự kiện "<span></span>" không?</p>
+                <p id="sothutu" style="display: none"></p>
+                <p style="text-align: center">
+                    <button onclick="xoaSuKien()">Xác nhận</button>
+                    <button onclick="document.getElementById('formXoa').style.display = 'none'">Hủy</button>
+                </p>
+                
+            </div>
+        </div>
+
+        <div id="tab1" class="tabcontent" style="display: block">
+            <p class="font3" style="margin-left: 10%">Sự kiện</p>
+            <div class="flex-container">
+                <div class="item" onclick="showAddContent()">
+                    <a>
+                        <img src="../HinhAnh/addFood.png" alt="anh" width="auto" height="auto">
+                    </a>
+                    <div>
+                        <p style="font-size: 24px; font-weight: bold; color: blue; text-align: center; margin-top: 50px;">THÊM<br>SỰ KIỆN</p>
+                        
+                        <p class="stt" style="display: none">stt</p>
+                    </div>
+                </div>
+                <!-- <div class="item">
+                    <a  onclick="showContent(0)">
+                        <img class="hinhanh" src="../HinhAnh/le-2-9-ga-tuoi-long-binh.png" alt="anh" width="auto" height="auto">
+                    </a>
+                    <div>
+                        <a  onclick="showContent(0)">
+                            <p class="tieude">MỪNG NGÀY QUỐC KHÁNH 2/9</p>
+                        </a>
+                        <p class="gioithieu">Công Ty TNHH Chăn Nuôi Long Bình gửi lời chúc tới tất cả khách hàng ngày lễ quốc
+                            khánh 2/9 nhiều niềm vui và thành công.</p>
+                        <i class="thoigian">01/09/2016</i>
+                        <p class="noidung" style="display: block"></p>
+                        <p class="stt" style="display: none">stt</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a onclick="showContent(1)">
+                        <img class="hinhanh" src="../HinhAnh/bai-viet-khai-truong-phu-lam-long-binh.png" alt="Longbinhfood" width="auto"
+                            height="auto">
+                    </a>
+                    <div>
+                        <a onclick="showContent(1)">
+                            <p class="tieude">KHAI TRƯƠNG CỬA HÀNG PHÚ LÂM QUẬN 6</p>
+                        </a>
+                        <p class="gioithieu">Khai trương......Khuyến Mãi......Khuyến Mãi........!<br>
+
+                            Ngày 23/08/2016 Công Ty TNHH Chăn Nuôi Long Bình khai trương cửa hàng bán gà tươi tại: 35B
+                            Tân
+                            Hòa Đông, P 14 Quận 6 TP Hồ Chí Minh (Cổng Chợ Phú Lâm)...<br></p>
+                            <i class="thoigian">25/08/2016</i>
+                            <p class="noidung" style="display: block"></p>
+                        <p class="stt" style="display: none">stt</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a onclick="showContent(2)">
+                        <img class="hinhanh" src="../HinhAnh/banner-ga-ran-2.jpg" alt="anh" width="auto" height="auto">
+                    </a>
+                    <div>
+                        <a  onclick="showContent(2)">
+                            <p class="tieude">GÀ RÁN LONG BÌNH CỨ ĂN ĐI KHÔNG LO VỀ GIÁ</p>
+                        </a>
+                        <p class="gioithieu">Gà rán Long Bình được làm từ gà chọn lọc tươi ngon nhất. có 4 loại combo cho khách
+                            hàng lựa chọn...</p>
+                        <i class="thoigian">22/06/2016</i>
+                        <p class="noidung" style="display: block"></p>
+                        <p class="stt" style="display: none">stt</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a onclick="showContent(3)">
+                        <img class="hinhanh" src="../HinhAnh/ga-ran-longbinhfood.jpg" alt="anh" width="auto" height="auto">
+                    </a>
+                    <div>
+                        <a onclick="showContent(3)">
+                            <p class="tieude">KHAI TRƯƠNG GÀ RÁN TẠI CHI NHÁNH SỐ 438 VÕ VĂN KIỆT, F.CÔ GIANG ,QUẬN 1</p>
+                        </a>
+                        <p class="gioithieu">Tiện Lợi Hơn - Nhanh Chóng Hơn - An Toàn Hơn - Ngon Miệng Hơn.( Take Away)<br>
+                            Gà Rán Của Người Việt Nam - Cho Tất Cả Mọi Người.<br>
+                            Nhân Dịp Khai Trương Ngày 29/04/2016 và Chương Trình Lễ 30/04, 01/05.<br></p>
+                        <i class="thoigian">29/04/2016</i>
+                        <p class="noidung" style="display: block"></p>
+                        <p class="stt" style="display: none">stt</p>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+        
+    </section>
+
+    <footer id="ft1">
+            
+    </footer>
+</body>
+
+</html>

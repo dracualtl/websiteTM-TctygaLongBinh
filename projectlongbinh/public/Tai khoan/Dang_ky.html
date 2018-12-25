@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="Dang_ky.css">
+    <script src="../jquery.js"></script>
+    <!-- <script src="../socket.io/socket.io.js"></script> -->
+    <script src="dangky.js"></script>
+    <script src="../test.js"></script>
+
+</head>
+
+<body onload="build2()">
+    <header id="header1">
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../">Trang chính</a>
+            </li>
+            <li>Đăng ký</li>
+        </ul>
+    </nav>
+
+    <section>
+        <p style="font-size: 30px">Đăng Ký Tài Khoản</p>
+        <p>
+            <b>Lưu ý:</b> Các mục dấu sao
+            <span>màu đỏ</span> không được bỏ trống & phải điền đầy đủ, chính xác</p>
+        <p class="font">Thông tin cá nhân</p>
+        <form id="form1" action="action_page.php">
+            <div class="column1">
+                <p>
+                    <label for="id">
+                        <span>*</span>ID:</label>
+                </p>
+                <p>
+                        <label for="hoten">
+                            <span>*</span>Họ và Tên:</label>
+                    </p>
+                <p>
+                    <label for="email">
+                        <span>*</span>Địa chỉ E-Mail:</label>
+                </p>
+                <p>
+                    <label for="sdt">
+                        <span>*</span>Điện thoại:</label>
+                </p>
+                <p>
+                        <label for="diachi">
+                                <span>*</span>Địa chỉ:</label>
+                </p>
+            </div>
+            <div class="column2">
+                
+                <input type="text" id="txtId" placeholder="ID" name="id" required>
+                <input type="text" id="txtName" placeholder="Họ và tên" name="hoten" required>
+                <input type="text" id="txtEmail" placeholder="Địa chỉ E-Mail" name="email" required>
+                <input type="text" id="txtSodt" placeholder="Điện thoại" name="sdt" required>
+                <input type="text" id="txtDiachi" placeholder="Địa chỉ" name="diachi" required>
+            </div>
+        </form>
+        <p class="font">Thông Tin Thêm</p>
+        <form id="form1" action="action_page.php">
+            <div class="column1">
+                <p>
+                    <label for="tknh">
+                        Tài khoản ngân hàng:</label>
+                </p>
+                <p>
+                    <label for="fax">
+                        Số fax:</label>
+                </p>
+            </div>
+            <div class="column2">
+                <input type="text" id="txtTknh" placeholder="Nhập số tài khoản ngân hàng" name="tknh" required>
+                <input type="text" id="txtFax" placeholder="Nhập số fax" name="fax" required>
+            </div>
+        </form>
+        <p class="font">Mật khẩu</p>
+        <form id="form1" action="action_page.php">
+            <div class="column1">
+                <p><br>
+                    <label for="pass">
+                        <span>*</span>Mật Khẩu:</label>
+                </p>
+                <p><br>
+                    <label for="repass">
+                        <span>*</span>Nhập lại Mật Khẩu:</label>
+                </p>
+            </div>
+            <div class="column2">
+                <br><input type="password" id="txtPass" placeholder="Nhập mật khẩu" name="Nhập mật khẩu" required><br><br>
+                <input type="password" id="txtrePass" placeholder="Nhập lại Mật Khẩu" name="Nhập lại mật khẩu" required>
+            </div>
+            
+        </form>
+        <input type="button" id="btnReg" value="Đăng Ký">
+        <input type="button" id="btnExit" value="Thoát">
+    </section>
+
+    <footer id="ft1">
+            
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link rel="stylesheet" type="text/css" href="../navigation.css">
+        <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+        <link rel="stylesheet" type="text/css" href="../page.css">
+        <link rel="stylesheet" type="text/css" href="../Tai khoan/lichsu.css">
+        <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+        <meta charset="uft-8">
+        <script src="../jquery.js"></script>
+        <script src="../test.js"></script>
+        <script src="lichsu.js"></script>
+
+</head>
+
+<body onload="build3()";  >
+    <header id="header1" >
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../">Trang chính</a>
+            </li>
+            <li>Đơn hàng</li>
+        </ul>
+    </nav>
+    <!-- hien dialog -->
+    <div id="exitWindow" >
+        <div class="modal-content">
+            <span onclick="hideDetail()" class="close">&nbsp&times;&nbsp</span>
+            <b>&nbsp</b>
+            <p><br>Bạn có muốn xóa đơn hàng?</p>
+            <a onclick="alert('Yes')">Yes</a>
+            <a onclick="alert('No')">No</a>
+            <p><br>Bạn có muốn xóa đơn hàng?</p>
+            <a onclick="alert('Yes')">Yes</a>
+            <a onclick="alert('No')">No</a>
+            <p><br>Bạn có muốn xóa đơn hàng?</p>
+            <a onclick="alert('Yes')">Yes</a>
+            <a onclick="alert('No')">No</a>
+            <div id="sanphamdemo"></div>
+            <p></p>
+        </div>
+    </div>
+    <div id="md">
+            <div class="modal-content">
+                <span onclick="hideDetail()" class="close">&times;</span>
+                <div class="phantren">
+                        <b style="font-size: 30px; text-align: center; padding-left: 10%">Long Bình Food - Công Ty TNHH Chăn Nuôi Long Bình</b><br><br>
+                    <b style="font-size: 25px; text-align: center; padding-left: 35%">Đơn hàng chi tiết</b><br><br>
+                    <div class="thongtindonhang">
+                    <b style="font-size: 20px">Thông tin đơn hàng</b><br><br>
+                    <span >Mã đơn hàng: <b class="lmadh">0123</b></span><br><br>
+                    <span >Ngày lập đơn hàng: <b class="lngaydh">0123</b></span><br><br>
+                    <span >Hình Thức Thanh Toán: <b class="lhtdh">0123</b></span><br><br>
+                    <span>Tình trạng đơn hàng: <b class="lttdh">0123</b></span><br><br>
+                    <span class="hienthilido" style="display: none;">Lí do:  <b class="llddh">0123</b></span><br><br>
+                    </div>
+                    <div class="thongtinkhachhang">
+                    <b style="font-size: 20px">Thông tin khách hàng</b><br><br>
+                    <span >Tên Khách hàng : <b class="tenkh">0123</b></span><br><br>
+                    <span >Địa chỉ khách hàng : <b class="dckh">0123</b></span><br><br>
+                    <span>Số điện thoại khách hàng : <b class="sdtkh">0123</b></span><br><br>
+                    <span >Ghi chú khách hàng : <b class="gckh">0123</b></span><br><br><br>
+                    <span class="anhthanhtoan" style="display: none;">Ảnh:  <div class="hovergallery">
+                        <img id="imagesp3" src="../HinhAnh/addFood.png" alt="anh" width="500px" height="500px" style="margin-left: -150px; margin-top: -270px; position: absolute; background-color: black">
+                    </div></span><br><br>
+                    </div>
+                    
+                </div>
+                
+                <div class="phangiua">
+                        _____________________________________________________________________________________________________________________________<br><br>
+                    <b style="font-size: 20px; padding-top: 2px;">Danh sách các sản phẩm</b><br><br>
+                    <table id="tablesanpham">
+                    </table>
+                    <br>
+                    <span style="font-size: 20px; padding-left: 75%">Tống tiền : <b class="tongtien">100000</b> VND</span>
+                    <span style="font-size: 20px; padding-left: 75%">Phí ship : <b class="phiship">115000</b> VND</span>
+                    <span style="font-size: 20px; padding-left: 75%">Tống cộng : <b class="tongcong">100000</b> VND</span><br><br><br><br>
+                    _____________________________________________________________________________________________________________________________<br><br>
+        
+
+                </div>
+                <div class="phancuoi">
+                    <b style="font-size: 25px; padding-left: 30%">Long Bình xin cảm ơn quý khách</b><br>
+                    <b style="font-size: 25px; padding-left: 45%">Hẹn gặp lại</b><br><br><br>
+                </div>
+            </div>
+        
+    </div>
+    <!-- Show danh sach san pham trong gio hang -->
+        <div id="thongtinmacdinh" style="display:block;">
+                <b style="font-size: 20px; text-align: center; margin-left: 70px;">Đơn hàng cần duyệt trống hoặc bạn chưa đăng nhập</b><br>
+                <input type="button" id="btnExit" value="Về Trang Chủ">
+        </div>
+        <div id="danhsachlichsu">
+                <p class="tieudedanhsach">Danh sách lịch sử giao dịch đơn hàng</p>
+                
+        </div>
+        
+        <footer id="ft1">
+            
+        </footer>
+</body>
+
+</html>

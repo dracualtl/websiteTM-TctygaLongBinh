@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../kinhdoanh/tkdonhang.css">
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Kho Long Bình - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="tkdonhang.js"></script>
+    <script src="../test.js"></script>
+</head>
+<body onload="build8(); themngay();">
+<header id="header1">
+</header>
+
+<nav>
+    <ul class="breadcrumb">
+        <li>
+            <a href="../">Trang chính</a>
+        </li>
+        <li>Quản lí đơn hàng</li>
+    </ul>
+</nav>
+
+<section>
+        <div id="exitWindow" >
+                <div class="modal-content">
+                    <span onclick="hideDetail1()" class="close">&nbsp&times;&nbsp</span>
+                    <b>&nbsp</b>
+                    <p> <br>Bạn có chắc lưu và bỏ qua những form chưa nhập?</p><br>
+                    <a onclick="luuvaokho()">Yes</a>
+                    <a onclick="hideDetail1()" style="background-color: red">No</a>
+                    <p></p>
+                </div>
+            </div>
+            <div id="exitWindow1" >
+                <div class="modal-content">
+                    <span onclick="hideDetail1()" class="close">&nbsp&times;&nbsp</span>
+                    <b>&nbsp</b>
+                    <p> <br>Dữ liệu sẽ không được lưu nếu bạn thoát?</p><br>
+                    <a onclick="thoat()" style="background-color: red; margin-left: 30%">Thoát</a>
+                    <a onclick="hideDetail1()" style="background-color: red">Trở Lại</a>
+                    <p></p>
+                </div>
+            </div>
+
+    <div id="thongtinmacdinh">
+        <div id="thongtinmacdinh" style="display:block;">
+            <b style="font-size: 20px; text-align: center; margin-left: 70px;">Bạn không có quyền sử dụng chức năng này</b><br>
+            <input type="button" onclick="window.location='../'" id="btnExit" value="Về Trang Chủ">
+        </div>
+    </div>
+    <!-- <div id="canhbao" style="display: none; float: right; height: 200px; overflow: auto;" >
+        <b style="font-size: 25px; color: red">Cảnh báo: </b><br>
+        <span id="canhbaosoluongmn" style="font-size: 15px;  display: none;"><b>Kho Miền Nam: </b></span>
+        <span id="canhbaosoluongmt" style="font-size: 15px;  display: none;"><b>Kho Miền Trung: </b></span>
+        <span id="canhbaosoluongmb" style="font-size: 15px;  display: none;"><b>Kho Miền Bắc: </b></span>
+        <span id="canhbaohansudung" style="font-size: 15px;  display: none;"><b>Hạn sử dụng: </b></span>
+    </div><br><br><br><br><br><br> -->
+    <div id="menuchucnang" style="display: none;">
+        <button id="nutxem" onclick="clickxem()" style="margin-left: 20%; margin-top: 80px">Xem chi tiết đơn hàng</button>
+        <button id="nutnhap" onclick="clicknhap()">Xem tổng thống kê đơn hàng, doanh thu</button>
+        <button id="nutxuat" onclick="clickxuat()">Gửi ghi chú cho nhân viên</button>
+    </div>
+    <div id="nutchucnang" >
+        <button id="tongkho" onclick="tongkho()" style="margin-left: 20%" disabled>Xem chi tiết</button>
+        <button id="miennam" onclick="miennam()">Đã hoàn thành</button>
+        <button id="mientrung" onclick="mientrung()">Bị Hủy</button>
+        <button id="mienbac" onclick="mienbac()">Đang thực hiện</button>
+        <button id="xemchitiet1" onclick="xemchitiet1()">Theo Lịch</button>
+        <input type="date" id="ngayloc"  style="margin-left: 950px; margin-top: -40px"> <input type="button" value="LỌC" id="btnloc"  style="margin-left: 1110px; margin-top: -22px"><br><br>
+    </div>
+    <div id="chucnangxemhang" style="display: none;">
+        <div id="dstongsanpham">
+                <p class="tieudedanhsach">Danh sách tất cả đơn hàng</p>
+                <table id="tableuser2">
+                    <tr>
+                            <th>STT</th>
+                            <th>Mã đơn hàng</th>
+                            <th>ID Khách hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Tình Trạng</th>
+                            <th>Kho</th>
+                            <th>ngày lập</th>
+                            
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmiennam">
+                <p class="tieudedanhsach">Danh sách đơn hàng hoàn thành</p>
+                <table id="tablemiennam">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã đơn hàng</th>
+                        <th>ID Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Tình Trạng</th>
+                        <th>Kho</th>
+                        <th>ngày lập</th>
+                        <th>ngày hoàn thành</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmientrung">
+                <p class="tieudedanhsach">Danh sách đơn hàng bị hủy</p>
+                <table id="tablemientrung">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã đơn hàng</th>
+                        <th>ID Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Tình Trạng</th>
+                        <th>Kho</th>
+                        <th>ngày lập</th>
+                          </tr>
+            </table><br><br>
+            <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dsmienbac">
+                <p class="tieudedanhsach">Danh sách đang thực hiện</p>
+            <table id="tablemienbac">
+                <tr>
+                    <th>STT</th>
+                    <th>Mã đơn hàng</th>
+                    <th>ID Khách hàng</th>
+                    <th>Tổng tiền</th>
+                    <th>Tình Trạng</th>
+                    <th>Kho</th>
+                    <th>ngày lập</th>
+                      </tr>
+        </table><br><br>
+        <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+        <div id="dschitiet">
+                <p class="tieudedanhsach">Danh sách chi tiết</p>
+            <table id="tablechitiet">
+                <tr>
+                    <th>STT</th>
+                    <th>Mã đơn hàng</th>
+                    <th>ID Khách hàng</th>
+                    <th>Tổng tiền</th>
+                    <th>Tình Trạng</th>
+                    <th>ngày lập</th>
+                      </tr>
+        </table><br><br>
+        <button style="margin-left: 45%" onclick="window.location='../'">Về trang chủ</button><br><br>
+        </div>
+    </div>
+    <div id="chucnangnhaphang" style="display: none;">
+        <p class="font3" style="margin-left: 30%">Thống Kê Số Lượng Đơn Hàng</p>
+        <div id="thongkesoluong" >
+                <p class="tieudedanhsach">Bảng thống kê</p>
+                <div id="chucnang" style="float: right; margin-right: 30%;">
+                    <button id="btntheongay" onclick="chontheongay()">Theo ngày</button>
+                    <button id="btntheothang" onclick="chontheothang()">Theo tháng</button>
+                    <button id="btntheonam" onclick="chontheonam()">Theo năm</button>
+                </div><br><br><br><br><br><br>
+                <div id="chucnang1" style="float: left; margin-left: 45%">
+                    <div id="tungay">
+                        <b style="font-size: 20px">Từ: </b> <input type="date" id="chonngay" style="margin-left: 10px;"><br>
+                    </div>
+                    <div id="denngay">
+                            <b style="font-size: 20px">Đến: </b> <input type="date" id="chonngaykt" >
+                    </div>
+                    <select id="chonthang">
+                        <option>Tháng 1</option>
+                        <option>Tháng 2</option>
+                        <option>Tháng 3</option>
+                        <option>Tháng 4</option>
+                        <option>Tháng 5</option>
+                        <option>Tháng 6</option>
+                        <option>Tháng 7</option>
+                        <option>Tháng 8</option>
+                        <option>Tháng 9</option>
+                        <option>Tháng 10</option>
+                        <option>Tháng 11</option>
+                        <option>Tháng 12</option>
+                    </select><br>
+                    <select id="chonnam">
+                            <option>năm 2020</option>
+                            <option>năm 2019</option>
+                            <option>năm 2018</option>
+                            <option>năm 2017</option>
+                            <option>năm 2016</option>
+                        </select>
+                    <button id="btnstart" onclick="batdauloc()">Bắt Đầu</button>
+                </div>
+                <table id="tablesoluong">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ngày</th>
+                        <th>Tổng ĐH hoàn thành</th>
+                        <th>Tổng ĐH bị hủy</th>
+                        <th>Tổng ĐH đang thực hiện</th>
+                        <th>Tổng Doanh Thu</th>
+                    </tr>
+            </table><br><br>
+            <button onclick="window.location='../'" style="margin-left: 45%" >Về trang chủ</button> <!-- reset lại giá trị trên khung nhập -->
+        </div>
+    </div>
+    <div id="chucnangxuathang" style="display: none;">
+        <p class="font3" style="margin-left: 30%">Gửi chiến lược kinh doanh</p>
+        <div id="xuathang" >
+            <p class="tieudedanhsach">Gửi thông báo cho nhân viên</p>
+            <span style="font-size: 30px; margin-left: 10%">Chọn Nhân Viên: </span>
+            <select id="chonnv" style="font-size: 30px; margin-left: 0px;">
+                <option>Nhân Viên Bán Hàng</option>
+                <option>Nhân Viên Giao Hàng</option>
+            </select><br>
+            <span style="font-size: 30px; margin-left: 10%;">Thông Báo  <span style="color: red">*</span>: </span><br><textarea id="txtThongbao" style="height: 300px; width: 500px; margin-left: 305px;"></textarea>
+            <br><br><br>
+        <button onclick="guithongbao()" style="margin-left: 30%">Gửi Thông Báo</button> <!-- nút này dùng để lưu sản phẩm vào kho -->
+        <button onclick="window.location='../'" >Về trang chủ</button> <!-- reset lại giá trị trên khung nhập -->
+    </div>
+    </div>
+</section>
+    
+</body>
+<footer id="ft1">
+            
+</footer>
+</html>

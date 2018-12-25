@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="uft-8">
+        <link rel="stylesheet" type="text/css" href="../navigation.css">
+        <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+        <link rel="stylesheet" type="text/css" href="../page.css">
+        <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+        <meta charset="uft-8">
+        <title>long bình food - Công Ty TNHH Chăn Nuôi Long Bình</title>
+        <script src="../jquery.js"></script>
+        <script src="../test.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="chat.js"></script>
+        <link href="chat.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body onload="build9(); loadchung()">
+            <header id="header1">
+                    
+                </header>
+                <div class="side-box" style="left: 0">
+                        <p onclick="CamNang()">CẨM NANG NẤU ĂN</p>
+                        <div>
+                            <span onclick="showSubBox(0)"><img src="../HinhAnh/ga-hap-xi-dau-long-binh.jpg" alt="anh">
+                                Gà hấp xì dầu</span>
+                
+                            <span onclick="showSubBox(1)"><img src="../HinhAnh/gaquay4.png" alt="anh">
+                                Gà nướng mật ong</span>
+                
+                            <span onclick="showSubBox(2)"><img src="../HinhAnh/chan6.jpg" alt="anh">
+                                Chân gà ngâm mắm ớt chua ngọt</span>
+                
+                            <span onclick="showSubBox(3)"><img src="../HinhAnh/ga-ran-tai-nha.png" alt="anh">
+                                Gà rán</span>
+                
+                            <span onclick="showSubBox(4)"><img src="../HinhAnh/dui-ga-ap-chao-xop-thom-long-binh.jpg" alt="anh">
+                                Đùi áp chảo xốt thơm</span>
+                
+                            <span onclick="showSubBox(5)"><img src="../HinhAnh/com-ga-hai-nam-long-binh.jpg" alt="anh">
+                                Cơm gà Hải Nam</span>
+                
+                            <span onclick="showSubBox(6)"><img src="../HinhAnh/ga-nuong-xien-que-long-binh.jpg" alt="anh">
+                                Gà nướng xiên que</span>
+                
+                            <span onclick="showSubBox(7)"><img src="../HinhAnh/ga-chien-nuoc-mam.jpg" alt="anh">
+                                Gà chiên nước mắm</span>
+                
+                            <span onclick="showSubBox(8)"><img src="../HinhAnh/13510873_265553337141339_1399069424200494536_n.jpg" alt="anh">
+                                Gà rang lá chanh</span>
+                
+                            <span onclick="showSubBox(9)"><img src="../HinhAnh/ga-kho-me.png" alt="anh">
+                                Gà kho me</span>
+                        </div>
+                    </div>
+                
+                    <div class="side-box sub">
+                        <span id="cachLam" style="width: 60%"></span>
+                        <span id="nguyenLieu" style="width: 30%;"></span>
+                        
+                    </div>
+        <div id="khungmacdinh">
+            <center><h1>Bạn không được sử dụng chức năng này</h1></center>
+        </div>
+        <div id="khungchung">
+            <div id="khungnhantin">
+                    <h2 style="padding-left: 100px;">Giải đáp thắc mắc online</h2>
+                    <div id="hienthinoidung">
+            
+                    </div><br>
+                    <span id="chonnvkh"></span><select id="dsnd">
+
+                    </select><br>
+                    <textarea id="txtnoidung" style="height: 70px; width: 400px;"></textarea>
+                    <input type="button" id="btnPress" value="Gửi">
+            </div>
+            <div id="dsnvonline">
+                <center><b id="tenonline">Nhân Viên Online</b><br></center>
+                -------------------------------------
+                <div id="danhsachnv">
+
+                </div>
+            </div>
+        </div>
+        <footer id="ft1">
+            
+        </footer>
+    </body>
+</html>

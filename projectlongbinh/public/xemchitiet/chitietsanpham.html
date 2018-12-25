@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+    <link rel="stylesheet" type="text/css" href="../xemchitiet/chitietsanpham.css">
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Gà góc tư - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="../test.js"></script>
+    <script src="chitietsanpham.js"></script>
+</head>
+
+<body onload="build7(); themsoluong1();">
+    <header id="header1">
+
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../">Trang chính</a>
+            </li>
+            <li>
+                <a href="../San pham/Ga_tuoi.html">Sản phẩm</a>
+            </li>
+            <li>Chi tiết sản phẩm</li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="row">
+            <div class="columntype4 nonepad">
+                <div class="fade slide" style="display: block">
+                    <img id="imagesp" src="../HinhAnh/14579499249632_ga-goc-tu-2-s-500x500.jpg">
+                </div>
+                <div class="fade slide">
+                    <img src="../HinhAnh/ga-goc-tu-4-s-500x500.jpg">
+                </div>
+                <div class="fade slide">
+                    <img src="../HinhAnh/Ga-goc-tu-1-s-500x500.jpg">
+                </div>
+                <div class="fade slide">
+                    <img src="../HinhAnh/Ga-goc-tu-3-s-500x500.jpg">
+                </div>
+                <div class="fade slide">
+                    <img src="../HinhAnh/Ga-goc-tu-s-500x500.jpg">
+                </div>
+                <div class="columntype5">
+                    <img src="../HinhAnh/14579499249632_ga-goc-tu-2-s-500x500.jpg" onclick="currentslide(1)">
+                    <img src="../HinhAnh/ga-goc-tu-4-s-500x500.jpg" onclick="currentslide(2)">
+                    <img src="../HinhAnh/Ga-goc-tu-1-s-500x500.jpg" onclick="currentslide(3)">
+                    <img src="../HinhAnh/Ga-goc-tu-3-s-500x500.jpg" onclick="currentslide(4)">
+                    <img src="../HinhAnh/Ga-goc-tu-s-500x500.jpg" onclick="currentslide(5)">
+                </div>
+            </div>
+            <div class="columntype4" style="padding-left: 20px;">
+                <div class="mota">
+                    <b style="display: none;" id="masp123">abc</b>
+                    <p id="tensp123" class="font1" style="font-size: 30px">Gà góc tư (Quater Leg)</p>
+                    <input type="text" class="font1" id="nhapTenSp" style="display: none;">
+                    <span style="display: flex; flex-wrap: wrap">Loại sản phẩm:   <input type="text" id="nhapQuyCach" style="display: none;"><b id="quyCach">   ga goc tu</b></span>
+                    <p style="display: flex; flex-wrap: wrap">Lượng hàng còn lại: <input type="number" id="nhapSlSp" style="display: none;"><span id="slSp">10</span>
+                    <p class="font2" style="display: flex; flex-wrap: wrap"><span id="giaSp">100.000</span><input type="text" class="font2" id="nhapGiaSp" style="display: none;"><span> VND</span>
+                        <button id="doiGia" style="float: right; display: none;">Đổi giá</button></p>
+
+                    <p>Giá chưa VAT: <span id="giaVAT">0</span>VND</p>
+                    <div id="muaSp">
+                        <p>Số lượng mua:</p>
+                        <div>
+                            <input class="soluongmua" type="number" value="1" min="1" max="999">
+                            <button onclick="chucnangthem1(0)">THÊM VÀO GIỎ</button>
+                        </div>
+                    </div>
+                    <div id="quanLySp" style="display: none;">
+                        <p style="display: flex; flex-wrap: wrap">Khuyến mãi: <input type="text"></p>
+                        <p style="display: flex; flex-wrap: wrap">Thời gian bắt đầu khuyến mãi: <input type="text"></p>
+                        <button onclick="">Sửa</button>
+                        <button onclick="">Trở Về</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="background-color: rgb(218, 213, 213, 0.5)">
+            <div class="tabsp">
+                <button class="tablinks active" onclick="changeTab(event, 'mota')">Mô tả</button>
+                <button class="tablinks" onclick="changeTab(event, 'danhgia')">Đánh giá</button>
+            </div>
+            <div id="danhgia" class="tabcontent">
+                <div>
+                    <p><br>Không có đánh giá cho sản phẩm này.</p>
+                    <p style="font-size: 30px">Gửi Bình luận</p><br>
+                    <p><b class="red">* </b>Họ & Tên:</p>
+                    <input type="text"><br>
+                    <p><b class="red">* </b>Nội dung:</p>
+                    <textarea name="noidung" style="height:200px"></textarea><br>
+                    <p style="color: grey"><b class="red">Lưu ý: </b>không hỗ trợ HTML!</p><br>
+                    <p><b class="red">* </b>Cho điểm: Bình thường
+                        <input type="radio"><input type="radio"><input type="radio">
+                        <input type="radio"><input type="radio"> Tốt</p><br>
+
+                    <button>TIẾP TỤC</button><br><br>
+                </div>
+            </div>
+            <div id="mota" class="tabcontent" style="display: block">
+                <div>
+                    <p><br><span><b>CÔNG TY TNHH CHĂN NUÔI LONG BÌNH</b></span></p>
+                    <p>Nhà cung cấp sản phẩm thịt gia cầm làm sẳn Sạch - An toàn - Vệ sinh <br>
+                        Liên hệ với chúng tôi để có giá tốt nhất.<br>
+                        _ Phone: 0919166228</p>
+                    <p>_ Email : hoangphuc@longbinhfood.vn</p>
+                    <p>_ Mua Gà Tươi tại các cửa hàng khu vực Hồ Chí Minh</p>
+                    <p><b>1. Cửa hàng KDSP Gia Cầm Gà Hải Đăng</b></p>
+                    <p><b>Phone 1:</b> 0919.188.228 (Mr.Thịnh)</p>
+                    <p><b>Phone 2:</b> 0917.200.228 (Mr.Bồi)</p>
+                    <p><b>Địa Chỉ:</b> Số 322, Đường Liên Tỉnh 5 , P.6, Q.8</p>
+                    <p><b>2. Cửa hàng Long Bình Quận 1</b></p>
+                    <p><b>Phone:</b> 0919.160.228 (Mr. Hưng)</p>
+                    <p><b>Địa Chỉ:</b> Số 5, Nguyễn Thái Học, P.Cầu Ông Lãnh, Quận 1</p>
+                    <p><b>3. Cửa hàng Long Bình Chợ Bình Điền</b></p>
+                    <p><b>Phone:</b> 0915.610.228 (Mr. Phú)</p>
+                    <p><b>Địa Chỉ:</b> Sạp Phú Sơn, H1042 Lô H1, Chợ Đầu Mối Bình Điền</p>
+                    <p><b>4. Cửa hàng Long Bình Quận Tân Phú</b></p>
+                    <p><b>Phone:</b> 0919.600.228 (Mr. Tấn)</p>
+                    <p><b>Địa Chỉ:</b> Số 270, Nguyễn Sơn, P.Phú Thọ Hoà, Quận Tân Phú</p>
+                    <p><b>5. Văn Phòng Đại Diện Công Ty Long Bình (Chi Nhánh 1)</b></p>
+                    <p><b>Phone:</b> 0916.610.228 (Mr. Phúc)</p>
+                    <p><b>Địa Chỉ:</b> Số 438, Võ Văn Kiệt, P. Cô Giang, Quận 1</p>
+                    <p><b>6. Cửa hàng KDSP Gia Cầm Gà Hải Đăng (Bán Lẻ)</b></p>
+                    <p><b>Phone:</b> 0943.610.228 (Mrs. Hiền)</p>
+                    <p><b>Địa Chỉ:</b> Số 322, Đường Liên Tỉnh 5 , P.6, Q.8</p>
+                    <p><b>7. Cửa Hàng Gà Việt</b></p>
+                    <p><b>Phone:</b> 0919.166.228 (Mr. Sinh)</p>
+                    <p><b>Địa Chỉ:</b> Số 53 Đỗ Quang Đẩu, P.Phạm Ngũ Lão, Quận 1</p>
+                    <p><b>8. Cửa Hàng Long Bình (Quận 6)</b></p>
+                    <p><b>Phone:</b> 0916.660.228 (Mr. Hạ)</p>
+                    <p><b>Địa Chỉ:</b> Số 35B, Tân Hoà Đông, Phường 14, Quận 6, TP. Hồ Chí Minh<br><br></p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="ft1">
+            
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../Lien he/Lien_he.css">
+    <link href="http://longbinhfood.vn/image/catalog/logo-longbinh.png" rel="icon" />
+    <meta charset="uft-8">
+    <title>Liên Hệ - Công Ty TNHH Chăn Nuôi Long Bình</title>
+    <script src="../jquery.js"></script>
+    <script src="Lien_he.js"></script>
+    <script src="../test.js"></script>
+</head>
+
+<body onload="build2()">
+    <header id="header1">
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../">Trang chính</a>
+            </li>
+            <li>Liên hệ</li>
+        </ul>
+    </nav>
+
+    <section>
+        <div style="display: flex">
+            <div class="column-left">
+                <p style="font-size: 30px">LIÊN HỆ VỚI CHÚNG TÔI</p>
+                <form>
+                    <label for="hoten">Họ tên:</label>
+                    <input type="text" placeholder="" name="hoten" id="ten" required>
+
+                    <label for="email">Địa chỉ E-mail:</label>
+                    <input type="text" placeholder="" name="email" id="email" required>
+
+                    <label for="noidung">Nội dung:</label>
+                    <textarea name="noidung" style="height:200px" id="noidung" required></textarea>
+                    <br>
+                    <label for="xacnhan">
+                        <!-- <span style="color: red">*</span> Enter the code in the box below</label> -->
+                    <!-- <input type="text" name="xacnhan" required> -->
+
+                    <button onclick="guiLienHe()" class="send">Gửi</button>
+                </form>
+
+                
+            </div>
+            <div class="column-right">
+                <p style="font-size: 30px">THÔNG TIN CỦA CHÚNG TÔI:</p>
+                <div style="background-color: white; display: flex">
+                    <div style="flex: 40%; margin: 20px 0 20px 20px">
+                        <img src="lbf.png" alt="Longbinhfood" width="150" height="130" style="margin: 10px">
+                        <p>
+                            <b>Thông tin thêm:</b>
+                            <br>Email : longbinhfood@gmail.com</p>
+                    </div>
+
+                    <p style="flex: 40%; margin: 20px 20px 20px 0">
+                        <b>long binh food - Gà tươi Long Bình</b>
+                        <br>
+                        <i>53 Đỗ Quang Đẩu, Phuờng Phạm Ngũ Lão, Quận 1, Tp.HCM</i>
+                        <br>
+                        <br>
+                        <b>Điện thoại:</b>091.9166.228
+                        <br>
+                        <b>Fax:</b>(08) 3758 4746</p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="ft1">
+            
+    </footer>
+</body>
+
+</html>

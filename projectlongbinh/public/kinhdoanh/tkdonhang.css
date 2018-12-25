@@ -1,0 +1,291 @@
+
+
+table {
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#menuchucnang button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#formNhap button{
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#nutchucnang button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 5px 10px;
+    background-color: #999
+}
+
+ input[type=number]{
+    width: 50px;
+    height: auto;
+    font-size: 22px;
+    border: 1px solid grey;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+} 
+
+#addForm a, #exitWindow1 a {
+    padding: 5px 15px;
+    margin-left: 15px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px gray; 
+}
+
+#addForm a:active, #exitWindow1 a:active {
+    box-shadow: none;
+    margin-left: 16px;
+    margin-bottom: 1px;
+}
+
+#exitWindow1 {
+    background-color: rgba(255,255,255,0);
+    font-size: 18px;
+}
+
+#exitWindow1 .modal-content {
+    width: 30%;
+    border-radius: 5px;
+}
+
+#exitWindow1 b {
+    background-color: blue;
+    margin: -5px -1px 0;
+    padding-right: 99.5%;
+    padding-top: 1px;
+    padding-bottom: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#exitWindow1 .close {
+    right: 35%;
+    color: white;
+    border-radius: 5px;
+}
+
+#exitWindow1 .close:hover {
+    background-color: red;
+}
+
+#thongtinmacdinh {
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+#thongtinmacdinh input[id=btnExit]{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 5%;
+  margin-bottom: 50px;
+  margin-left: 15%
+}
+
+.input [type="date"]{
+    width: 70px;
+}
+
+#thongkesoluong{
+    font-size: 10px;
+    width:1250px;
+    height:auto;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+#thongkesoluong button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#dstongsanpham{
+    font-size: 10px;
+    width:1250px;
+    height:auto;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+#dstongsanpham button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+#dsmiennam{
+    font-size: 10px;
+    width:1250px;
+    height:auto;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+#dsmiennam button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#nhaphang button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+#xuathang button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#dsmientrung{
+    font-size: 10px;
+    width:1250px;
+    height:auto;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+#dsmientrung button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#dsmienbac{
+    font-size: 10px;
+    width:1250px;
+    height:auto;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+#dsmienbac button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#dschitiet{
+    font-size: 10px;
+    width:1250px;
+    height:auto;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+#nhaphang{
+    font-size: 10px;
+    width:900px;
+    height:auto;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+#xuathang{
+    font-size: 10px;
+    width:900px;
+    height:auto;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+#baotable{
+    font-size: 10px;
+    width:600px;
+    height:auto;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    border:5px solid black;
+    background-color: #999;
+}
+
+
+#dschitiet button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px 10px;
+}
+
+#danhsachsp{
+    font-size: 10px;
+    width:600px;
+    height:90px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 40px;
+    border:5px solid cornflowerblue;
+}
+
+.tieudedanhsach{
+    color: black;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.anhsp{
+    left: 20%;
+    float: left;
+}
+
+.thongtinsp{
+    background-color: #999
+}

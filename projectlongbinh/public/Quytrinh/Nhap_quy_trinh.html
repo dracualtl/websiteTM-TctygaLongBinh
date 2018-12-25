@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../navigation.css">
+    <link rel="stylesheet" type="text/css" href="../page.css">
+    <link rel="stylesheet" type="text/css" href="../pagination.css">
+    <link rel="stylesheet" type="text/css" href="../slideshow_1.css">
+    <link rel="stylesheet" type="text/css" href="../QuyTrinh/Nhap_quy_trinh.css">
+    <script src="../QuyTrinh/Nhap_quy_trinh.js"></script>
+    <script src="../Khuyen mai/Khuyen_mai.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../test.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body onload="build9(); showQuyTrinh();">
+    <header id="header1">
+        
+    </header>
+
+    <nav>
+        <ul class="breadcrumb">
+            <li>
+                <a href="../Trang_chinh_1.html">Trang chính</a>
+            </li>
+            <li>Quy trình chăn nuôi</li>
+        </ul>
+    </nav>
+
+    <section>
+        <!-- new ( -->
+        <div id="cheBien">
+            <div class="modal-content">
+                <span onclick="hideCheBien()" class="close" style="right: 21%">&times;</span>
+                <p style="text-align: center; background-color: rgba(8, 8, 250, 0.8); padding: 20px 0; margin-top: 0; margin-bottom: 0"><b>Nhập vào kho các sản phẩm:</b></p>
+                <p>Đợt: <span id="dotCb"></span><span id="cnangtb" style="display: none"></span><span id="sluong" style="display: none"></span></p>
+                <p>Loại gà: <span id="lgaCb"></span></p>
+                <p>Chọn mã kho: <select id="makho">
+                    <option value="K3">Kho miền Bắc</option>
+                    <option value="K2">Kho miền Trung</option>
+                    <option value="K1">Kho miền Nam</option>
+                </select></p>
+                <p>Chọn ngày nhập: <input id="ngaynhap" type="date"></p>
+                <table id="cbTable">
+                    <tr>
+                        <th style="width: 40%">Tên sản phẩm</th>
+                        <th style="width: 20%">Số lượng</th>
+                        <th style="width: 15%">Hao hụt</th> <!-- new -->
+                        <th style="width: 25%">Hạn sử dụng</th>
+                    </tr>
+                </table>
+                <p style="text-align: center; padding: 15px 0">
+                    <button onclick="nhapKho()">Nhập kho</button>
+                    <button onclick="hideCheBien()">Hủy</button>
+                </p>
+                
+            </div>
+        </div>
+<!-- new  )-->
+        <div id="formXoa">
+            <div class="modal-content" style="width: 35%; height: fit-content"> 
+                <p>Bạn muốn xóa đi quy trình sản xuất <b id="xoaloaiga"></b> ở đợt <b id="xoadot"></b>?</p>
+                <p style="text-align: center">
+                    <button onclick="deleteQuyTrinh()">Xác nhận</button>
+                    <button onclick="document.getElementById('formXoa').style.display = 'none'">Hủy</button>
+                </p>
+                
+            </div>
+        </div>
+
+        <div id="formHoanThanh">
+            <div class="modal-content" style="width: 40%; height: fit-content">
+                <p>Xin điền vào thông tin bên dưới để hoàn thành quy trình chăn nuôi <b id="thanhloaiga"></b> đợt <b id="thanhdot"></b>.</p>
+                <table style="position: relative; width: 100%">
+                    
+                    <tr>
+                        <td style="width: 35%">Cân nặng trung bình:</td>
+                        <td style="width: 65%"><input type="number" min="0" id="cn"></td>
+                    </tr>
+                    <tr>
+                        <td>Đơn vị tính:</td>
+                        <td><select id="dv">
+                            <option>kg</option>
+                            <option>g</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Tỷ lệ hao hụt:</td>
+                        <td><input type="number" value="0" min="0" id="hh"></td>
+                    </tr>
+                    <tr>
+                        <td>Chi phí sản xuất:</td>
+                        <td><input type="number" id="cp"></td>
+                    </tr>
+                </table>
+                
+                <p style="text-align: center">
+                    <button onclick="completeQuyTrinh()">Hoàn thành</button>
+                    <button onclick="document.getElementById('formHoanThanh').style.display = 'none'">Hủy</button>
+                </p>
+            </div>
+        </div>
+
+        <p class="font3" style="margin-left: 10%">QUY TRÌNH CHĂN NUÔI</p>
+        <div class="formNhap1">
+            <button onclick="showXemForm()" style="margin-left: 23%">Xem quy trình</button>
+            <button onclick="showSuaForm()">Sửa quy trình</button>
+            <button onclick="showThem()">Thêm quy trình</button>
+            <!-- <div class="dropdown">
+                <input id="search" onkeyup="onInputSearch()" type="text" style="width: 400px">
+                <div id="searchSpace"><br>
+                    <p><a href="">abc</a></p>
+                    <p><a href="">cde</a></p>
+                    <p><a href="">def</a></p>
+                    <p><a href="">fgh</a></p>
+                    <p><a href="">xyz</a></p>
+                </div>
+            </div> -->
+            
+        </div>
+
+        <div class="xemSp">
+            <table class="appendXem">
+                <tr>
+                    <th style="width: 5%">Đợt</th>
+                    <th style="width: 27%">Loại gà</th>
+                    <th style="width: 10%">Số lượng</th>
+                    <th style="width: 15%">Bắt đầu nuôi</th>
+                    <th style="width: 15%">Xuất chuồng</th>
+                    <th style="width: 8%">Cân nặng trung bình</th>
+                    <th style="width: 5%">Đơn vị</th>
+                    <th style="width: 5%">Hao hụt</th>
+                    <th style="width: 10%">Chi phí</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="suaSp">
+            <table class="appendSua" style="padding: 20px 10%">
+                <tr>
+                    <th style="width: 5%">Đợt</th>
+                    <th style="width: 20%">Loại gà</th>
+                    <th style="width: 7%">Số lượng</th>
+                    <th style="width: 12%">Bắt đầu nuôi</th>
+                    <th style="width: 12%">Xuất chuồng</th>
+                    <th style="width: 8%">Cân nặng trung bình</th>
+                    <th style="width: 5%">Đơn vị</th>
+                    <th style="width: 7%">Hao hụt</th>
+                    <th style="width: 10%">Chi phí</th>
+                    <th style="width: 10%">Chức năng</th>
+                </tr>
+                
+            </table>
+        </div>
+        <!-- new ( -->
+        <div class="formNhap">
+
+            <span id="themQuyTrinh" style="display: none">
+                <div>
+                    <p>Đợt: <input id="sd" type="number" onchange="limit()"></p>
+                    <p>Loại gà: <input type="text" id="lg"></p>
+                    <p>Số lượng: <input type="number" min="0" id="sl" onchange="limit()"></p>
+                    <p>Ngày bắt đầu nuôi: <input type="date" id="nbd"></p>
+                    <p>Ngày xuất chuồng: <input type="date" id="nxc"></p>
+                    <p style="text-align: center">
+                        <button onclick="addQuyTrinh()">Lưu</button>
+                        <button onclick="resetQuyTrinh()">Nhập lại</button>
+                    </p>
+                </div>
+            </span>
+        </div>
+        <!-- New ) -->
+    </section>
+
+    <footer id="ft1">
+            
+    </footer>
+</body>
+
+</html>
